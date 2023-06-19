@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated controlabstraction -->
+      <package
+            uri="http://soton.ac.uk/models/eventb/controlabstraction/2023"
+            class="ac.soton.emf.controlabstraction.ControlabstractionPackage"
+            genModel="model/controlabstraction.genmodel"/>
+   </extension>
+
+</plugin>

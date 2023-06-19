@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated controlabstraction -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="ac.soton.emf.controlabstraction.presentation.ControlabstractionModelWizardID"
+            name="%_UI_ControlabstractionModelWizard_label"
+            class="ac.soton.emf.controlabstraction.presentation.ControlabstractionModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ControlabstractionModelFile.gif">
+         <description>%_UI_ControlabstractionModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated controlabstraction -->
+      <editor
+            id="ac.soton.emf.controlabstraction.presentation.ControlabstractionEditorID"
+            name="%_UI_ControlabstractionEditor_label"
+            icon="icons/full/obj16/ControlabstractionModelFile.gif"
+            extensions="cabs"
+            class="ac.soton.emf.controlabstraction.presentation.ControlabstractionEditor"
+            contributorClass="ac.soton.emf.controlabstraction.presentation.ControlabstractionActionBarContributor">
+      </editor>
+   </extension>
+</plugin>

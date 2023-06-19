@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="controlabstraction" nsURI="http://soton.ac.uk/models/eventb/controlabstraction/2023"
+    nsPrefix="controlabstraction">
+  <eClassifiers xsi:type="ecore:EClass" name="Component" eSuperTypes="#//AbstractNamedElement #//AbstractStatefulEntity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Agent" eSuperTypes="#//AbstractNamedElement #//AbstractStatefulEntity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actions" eType="#//Action"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Assumption" eSuperTypes="#//AbstractNamedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Action" eSuperTypes="#//AbstractNamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conditions" upperBound="-1"
+        eType="#//State"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reliances" upperBound="-1"
+        eType="#//Assumption"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="action" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Component"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="errors" upperBound="-1"
+        eType="#//Error" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="State" eSuperTypes="#//AbstractNamedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractStatefulEntity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="states" upperBound="-1"
+        eType="#//State" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractNamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Actor" eSuperTypes="#//Agent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assumptions" upperBound="-1"
+        eType="#//Assumption" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ErrorType">
+    <eLiterals name="NOTOCCURRING"/>
+    <eLiterals name="OCCURRING" value="1"/>
+    <eLiterals name="TIMING" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Error" eSuperTypes="#//AbstractNamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ErrorType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="failure" eType="#//ThreatCondition"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ThreatCondition" eSuperTypes="#//AbstractNamedElement #//State">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mitigation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="System" eSuperTypes="#//AbstractNamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entities" upperBound="-1"
+        eType="#//AbstractStatefulEntity" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="purpose" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>
