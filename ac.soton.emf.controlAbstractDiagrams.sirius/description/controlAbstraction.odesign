@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/tree/description/1.0.0" xmlns:description_3="http://www.eclipse.org/sirius/diagram/description/1.1.0" name="controlAbstraction" version="12.0.0.2017041100">
-  <ownedViewpoints name="cabsViewPoint" modelFileExtension="cabs">
+  <ownedViewpoints name="cabsViewPoint" label="Control Abstraction Diagrams ViewPoint" modelFileExtension="cabs">
     <ownedRepresentations xsi:type="description_1:EditionTableDescription"/>
     <ownedRepresentations xsi:type="description_2:TreeDescription"/>
     <ownedRepresentations xsi:type="description_3:DiagramDescription" name="cabsDiagram" domainClass="System" enablePopupBars="true">
-      <metamodel href="../../ac.soton.emf.controlAbstractionDiagrams/model/controlabstraction.ecore#/"/>
+      <metamodel href="http://soton.ac.uk/models/eventb/controlabstraction/2023#/"/>
       <defaultLayer name="Default">
         <nodeMappings name="ComponentNode" label="Component" domainClass="Component"/>
         <nodeMappings name="AgentNode" label="Agent" domainClass="Agent"/>
