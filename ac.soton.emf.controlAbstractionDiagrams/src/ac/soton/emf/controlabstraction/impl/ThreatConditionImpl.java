@@ -1,9 +1,10 @@
 /**
+ * Copyright Text	Copyright © 2023-2023 - University of Southampton....
  */
-package controlabstraction.impl;
+package ac.soton.emf.controlabstraction.impl;
 
-import controlabstraction.ControlabstractionPackage;
-import controlabstraction.Failure;
+import ac.soton.emf.controlabstraction.ControlabstractionPackage;
+import ac.soton.emf.controlabstraction.ThreatCondition;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -13,18 +14,18 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Failure</b></em>'.
+ * An implementation of the model object '<em><b>Threat Condition</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link controlabstraction.impl.FailureImpl#getMitigation <em>Mitigation</em>}</li>
+ *   <li>{@link ac.soton.emf.controlabstraction.impl.ThreatConditionImpl#getMitigation <em>Mitigation</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class FailureImpl extends AbstractNamedElementImpl implements Failure {
+public class ThreatConditionImpl extends AbstractNamedElementImpl implements ThreatCondition {
 	/**
 	 * The default value of the '{@link #getMitigation() <em>Mitigation</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -50,7 +51,7 @@ public class FailureImpl extends AbstractNamedElementImpl implements Failure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FailureImpl() {
+	protected ThreatConditionImpl() {
 		super();
 	}
 
@@ -61,7 +62,7 @@ public class FailureImpl extends AbstractNamedElementImpl implements Failure {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ControlabstractionPackage.Literals.FAILURE;
+		return ControlabstractionPackage.Literals.THREAT_CONDITION;
 	}
 
 	/**
@@ -69,6 +70,7 @@ public class FailureImpl extends AbstractNamedElementImpl implements Failure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getMitigation() {
 		return mitigation;
 	}
@@ -78,11 +80,12 @@ public class FailureImpl extends AbstractNamedElementImpl implements Failure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMitigation(String newMitigation) {
 		String oldMitigation = mitigation;
 		mitigation = newMitigation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ControlabstractionPackage.FAILURE__MITIGATION, oldMitigation, mitigation));
+			eNotify(new ENotificationImpl(this, Notification.SET, ControlabstractionPackage.THREAT_CONDITION__MITIGATION, oldMitigation, mitigation));
 	}
 
 	/**
@@ -93,7 +96,7 @@ public class FailureImpl extends AbstractNamedElementImpl implements Failure {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ControlabstractionPackage.FAILURE__MITIGATION:
+			case ControlabstractionPackage.THREAT_CONDITION__MITIGATION:
 				return getMitigation();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -107,7 +110,7 @@ public class FailureImpl extends AbstractNamedElementImpl implements Failure {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ControlabstractionPackage.FAILURE__MITIGATION:
+			case ControlabstractionPackage.THREAT_CONDITION__MITIGATION:
 				setMitigation((String)newValue);
 				return;
 		}
@@ -122,7 +125,7 @@ public class FailureImpl extends AbstractNamedElementImpl implements Failure {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ControlabstractionPackage.FAILURE__MITIGATION:
+			case ControlabstractionPackage.THREAT_CONDITION__MITIGATION:
 				setMitigation(MITIGATION_EDEFAULT);
 				return;
 		}
@@ -137,7 +140,7 @@ public class FailureImpl extends AbstractNamedElementImpl implements Failure {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ControlabstractionPackage.FAILURE__MITIGATION:
+			case ControlabstractionPackage.THREAT_CONDITION__MITIGATION:
 				return MITIGATION_EDEFAULT == null ? mitigation != null : !MITIGATION_EDEFAULT.equals(mitigation);
 		}
 		return super.eIsSet(featureID);
@@ -159,4 +162,4 @@ public class FailureImpl extends AbstractNamedElementImpl implements Failure {
 		return result.toString();
 	}
 
-} //FailureImpl
+} //ThreatConditionImpl

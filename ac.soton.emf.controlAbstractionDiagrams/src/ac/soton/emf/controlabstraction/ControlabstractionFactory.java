@@ -104,13 +104,22 @@ public interface ControlabstractionFactory extends EFactory {
 	Error createError();
 
 	/**
-	 * Returns a new object of class '<em>Failure</em>'.
+	 * Returns a new object of class '<em>Threat Condition</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Failure</em>'.
+	 * @return a new object of class '<em>Threat Condition</em>'.
 	 * @generated
 	 */
-	Failure createFailure();
+	ThreatCondition createThreatCondition();
+
+	/**
+	 * Returns a new object of class '<em>System</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>System</em>'.
+	 * @generated
+	 */
+	System createSystem();
 
 	/**
 	 * Returns the package supported by this factory.

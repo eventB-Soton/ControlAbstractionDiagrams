@@ -1,10 +1,11 @@
 /**
+ * Copyright Text	Copyright © 2023-2023 - University of Southampton....
  */
-package controlabstraction.provider;
+package ac.soton.emf.controlabstraction.provider;
 
 
-import controlabstraction.ControlabstractionPackage;
-import controlabstraction.Failure;
+import ac.soton.emf.controlabstraction.ControlabstractionPackage;
+import ac.soton.emf.controlabstraction.ThreatCondition;
 
 import java.util.Collection;
 import java.util.List;
@@ -18,19 +19,19 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link controlabstraction.Failure} object.
+ * This is the item provider adapter for a {@link ac.soton.emf.controlabstraction.ThreatCondition} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class FailureItemProvider extends AbstractNamedElementItemProvider {
+public class ThreatConditionItemProvider extends AbstractNamedElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FailureItemProvider(AdapterFactory adapterFactory) {
+	public ThreatConditionItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -61,9 +62,9 @@ public class FailureItemProvider extends AbstractNamedElementItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Failure_mitigation_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Failure_mitigation_feature", "_UI_Failure_type"),
-				 ControlabstractionPackage.Literals.FAILURE__MITIGATION,
+				 getString("_UI_ThreatCondition_mitigation_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ThreatCondition_mitigation_feature", "_UI_ThreatCondition_type"),
+				 ControlabstractionPackage.Literals.THREAT_CONDITION__MITIGATION,
 				 true,
 				 false,
 				 false,
@@ -73,14 +74,14 @@ public class FailureItemProvider extends AbstractNamedElementItemProvider {
 	}
 
 	/**
-	 * This returns Failure.gif.
+	 * This returns ThreatCondition.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Failure"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ThreatCondition"));
 	}
 
 	/**
@@ -91,10 +92,10 @@ public class FailureItemProvider extends AbstractNamedElementItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Failure)object).getName();
+		String label = ((ThreatCondition)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_Failure_type") :
-			getString("_UI_Failure_type") + " " + label;
+			getString("_UI_ThreatCondition_type") :
+			getString("_UI_ThreatCondition_type") + " " + label;
 	}
 
 
@@ -109,8 +110,8 @@ public class FailureItemProvider extends AbstractNamedElementItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Failure.class)) {
-			case ControlabstractionPackage.FAILURE__MITIGATION:
+		switch (notification.getFeatureID(ThreatCondition.class)) {
+			case ControlabstractionPackage.THREAT_CONDITION__MITIGATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

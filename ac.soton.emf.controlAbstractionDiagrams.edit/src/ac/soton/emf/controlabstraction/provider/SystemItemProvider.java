@@ -1,11 +1,11 @@
 /**
+ * Copyright Text	Copyright © 2023-2023 - University of Southampton....
  */
-package controlabstraction.provider;
+package ac.soton.emf.controlabstraction.provider;
 
 
-import controlabstraction.Agent;
-import controlabstraction.ControlabstractionFactory;
-import controlabstraction.ControlabstractionPackage;
+import ac.soton.emf.controlabstraction.ControlabstractionFactory;
+import ac.soton.emf.controlabstraction.ControlabstractionPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -15,23 +15,25 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link controlabstraction.Agent} object.
+ * This is the item provider adapter for a {@link ac.soton.emf.controlabstraction.System} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class AgentItemProvider extends AbstractNamedElementItemProvider {
+public class SystemItemProvider extends AbstractNamedElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AgentItemProvider(AdapterFactory adapterFactory) {
+	public SystemItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -46,8 +48,31 @@ public class AgentItemProvider extends AbstractNamedElementItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addPurposePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Purpose feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPurposePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_System_purpose_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_System_purpose_feature", "_UI_System_type"),
+				 ControlabstractionPackage.Literals.SYSTEM__PURPOSE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -62,8 +87,7 @@ public class AgentItemProvider extends AbstractNamedElementItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ControlabstractionPackage.Literals.ABSTRACT_STATEFUL_ENTITY__STATES);
-			childrenFeatures.add(ControlabstractionPackage.Literals.AGENT__ACTIONS);
+			childrenFeatures.add(ControlabstractionPackage.Literals.SYSTEM__ENTITIES);
 		}
 		return childrenFeatures;
 	}
@@ -82,14 +106,14 @@ public class AgentItemProvider extends AbstractNamedElementItemProvider {
 	}
 
 	/**
-	 * This returns Agent.gif.
+	 * This returns System.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Agent"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/System"));
 	}
 
 	/**
@@ -100,10 +124,10 @@ public class AgentItemProvider extends AbstractNamedElementItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Agent)object).getName();
+		String label = ((ac.soton.emf.controlabstraction.System)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_Agent_type") :
-			getString("_UI_Agent_type") + " " + label;
+			getString("_UI_System_type") :
+			getString("_UI_System_type") + " " + label;
 	}
 
 
@@ -118,9 +142,11 @@ public class AgentItemProvider extends AbstractNamedElementItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Agent.class)) {
-			case ControlabstractionPackage.AGENT__STATES:
-			case ControlabstractionPackage.AGENT__ACTIONS:
+		switch (notification.getFeatureID(ac.soton.emf.controlabstraction.System.class)) {
+			case ControlabstractionPackage.SYSTEM__PURPOSE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+			case ControlabstractionPackage.SYSTEM__ENTITIES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -140,18 +166,23 @@ public class AgentItemProvider extends AbstractNamedElementItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ControlabstractionPackage.Literals.ABSTRACT_STATEFUL_ENTITY__STATES,
-				 ControlabstractionFactory.eINSTANCE.createState()));
+				(ControlabstractionPackage.Literals.SYSTEM__ENTITIES,
+				 ControlabstractionFactory.eINSTANCE.createComponent()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ControlabstractionPackage.Literals.ABSTRACT_STATEFUL_ENTITY__STATES,
-				 ControlabstractionFactory.eINSTANCE.createFailure()));
+				(ControlabstractionPackage.Literals.SYSTEM__ENTITIES,
+				 ControlabstractionFactory.eINSTANCE.createAgent()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ControlabstractionPackage.Literals.AGENT__ACTIONS,
-				 ControlabstractionFactory.eINSTANCE.createAction()));
+				(ControlabstractionPackage.Literals.SYSTEM__ENTITIES,
+				 ControlabstractionFactory.eINSTANCE.createAbstractStatefulEntity()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ControlabstractionPackage.Literals.SYSTEM__ENTITIES,
+				 ControlabstractionFactory.eINSTANCE.createActor()));
 	}
 
 }

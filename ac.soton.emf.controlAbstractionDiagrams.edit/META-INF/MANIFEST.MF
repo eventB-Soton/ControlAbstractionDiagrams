@@ -9,8 +9,7 @@ Bundle-Activator: ac.soton.emf.controlabstraction.provider.ControlabstractionEdi
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-11
-Export-Package: controlabstraction.provider,
- ac.soton.emf.controlabstraction.provider
+Export-Package: ac.soton.emf.controlabstraction.provider
 Require-Bundle: org.eclipse.core.runtime,
  ac.soton.emf.controlAbstractionDiagrams;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport

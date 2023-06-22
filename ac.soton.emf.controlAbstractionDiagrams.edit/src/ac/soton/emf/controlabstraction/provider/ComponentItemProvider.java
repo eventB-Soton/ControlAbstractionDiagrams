@@ -145,7 +145,7 @@ public class ComponentItemProvider extends AbstractNamedElementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(ControlabstractionPackage.Literals.ABSTRACT_STATEFUL_ENTITY__STATES,
-				 ControlabstractionFactory.eINSTANCE.createFailure()));
+				 ControlabstractionFactory.eINSTANCE.createThreatCondition()));
 	}
 
 }

@@ -11,8 +11,8 @@ import ac.soton.emf.controlabstraction.Agent;
 import ac.soton.emf.controlabstraction.Assumption;
 import ac.soton.emf.controlabstraction.Component;
 import ac.soton.emf.controlabstraction.ControlabstractionPackage;
-import ac.soton.emf.controlabstraction.Failure;
 import ac.soton.emf.controlabstraction.State;
+import ac.soton.emf.controlabstraction.ThreatCondition;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -141,11 +141,18 @@ public class ControlabstractionSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ControlabstractionPackage.FAILURE: {
-				Failure failure = (Failure)theEObject;
-				T result = caseFailure(failure);
-				if (result == null) result = caseState(failure);
-				if (result == null) result = caseAbstractNamedElement(failure);
+			case ControlabstractionPackage.THREAT_CONDITION: {
+				ThreatCondition threatCondition = (ThreatCondition)theEObject;
+				T result = caseThreatCondition(threatCondition);
+				if (result == null) result = caseState(threatCondition);
+				if (result == null) result = caseAbstractNamedElement(threatCondition);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ControlabstractionPackage.SYSTEM: {
+				ac.soton.emf.controlabstraction.System system = (ac.soton.emf.controlabstraction.System)theEObject;
+				T result = caseSystem(system);
+				if (result == null) result = caseAbstractNamedElement(system);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -289,17 +296,32 @@ public class ControlabstractionSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Failure</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Threat Condition</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Failure</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Threat Condition</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFailure(Failure object) {
+	public T caseThreatCondition(ThreatCondition object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>System</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>System</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSystem(ac.soton.emf.controlabstraction.System object) {
 		return null;
 	}
 

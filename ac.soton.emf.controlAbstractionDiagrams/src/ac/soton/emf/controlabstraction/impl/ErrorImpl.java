@@ -5,7 +5,7 @@ package ac.soton.emf.controlabstraction.impl;
 
 import ac.soton.emf.controlabstraction.ControlabstractionPackage;
 import ac.soton.emf.controlabstraction.ErrorType;
-import ac.soton.emf.controlabstraction.Failure;
+import ac.soton.emf.controlabstraction.ThreatCondition;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -57,7 +57,7 @@ public class ErrorImpl extends AbstractNamedElementImpl implements ac.soton.emf.
 	 * @generated
 	 * @ordered
 	 */
-	protected Failure failure;
+	protected ThreatCondition failure;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -107,10 +107,10 @@ public class ErrorImpl extends AbstractNamedElementImpl implements ac.soton.emf.
 	 * @generated
 	 */
 	@Override
-	public Failure getFailure() {
+	public ThreatCondition getFailure() {
 		if (failure != null && failure.eIsProxy()) {
 			InternalEObject oldFailure = (InternalEObject)failure;
-			failure = (Failure)eResolveProxy(oldFailure);
+			failure = (ThreatCondition)eResolveProxy(oldFailure);
 			if (failure != oldFailure) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ControlabstractionPackage.ERROR__FAILURE, oldFailure, failure));
@@ -124,7 +124,7 @@ public class ErrorImpl extends AbstractNamedElementImpl implements ac.soton.emf.
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Failure basicGetFailure() {
+	public ThreatCondition basicGetFailure() {
 		return failure;
 	}
 
@@ -134,8 +134,8 @@ public class ErrorImpl extends AbstractNamedElementImpl implements ac.soton.emf.
 	 * @generated
 	 */
 	@Override
-	public void setFailure(Failure newFailure) {
-		Failure oldFailure = failure;
+	public void setFailure(ThreatCondition newFailure) {
+		ThreatCondition oldFailure = failure;
 		failure = newFailure;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ControlabstractionPackage.ERROR__FAILURE, oldFailure, failure));
@@ -170,7 +170,7 @@ public class ErrorImpl extends AbstractNamedElementImpl implements ac.soton.emf.
 				setType((ErrorType)newValue);
 				return;
 			case ControlabstractionPackage.ERROR__FAILURE:
-				setFailure((Failure)newValue);
+				setFailure((ThreatCondition)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -188,7 +188,7 @@ public class ErrorImpl extends AbstractNamedElementImpl implements ac.soton.emf.
 				setType(TYPE_EDEFAULT);
 				return;
 			case ControlabstractionPackage.ERROR__FAILURE:
-				setFailure((Failure)null);
+				setFailure((ThreatCondition)null);
 				return;
 		}
 		super.eUnset(featureID);

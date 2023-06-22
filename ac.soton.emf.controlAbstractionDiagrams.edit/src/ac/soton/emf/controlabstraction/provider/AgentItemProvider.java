@@ -147,7 +147,7 @@ public class AgentItemProvider extends AbstractNamedElementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(ControlabstractionPackage.Literals.ABSTRACT_STATEFUL_ENTITY__STATES,
-				 ControlabstractionFactory.eINSTANCE.createFailure()));
+				 ControlabstractionFactory.eINSTANCE.createThreatCondition()));
 
 		newChildDescriptors.add
 			(createChildParameter

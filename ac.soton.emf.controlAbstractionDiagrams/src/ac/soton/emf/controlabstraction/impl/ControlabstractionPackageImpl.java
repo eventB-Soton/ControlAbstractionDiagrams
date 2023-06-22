@@ -13,8 +13,8 @@ import ac.soton.emf.controlabstraction.Component;
 import ac.soton.emf.controlabstraction.ControlabstractionFactory;
 import ac.soton.emf.controlabstraction.ControlabstractionPackage;
 import ac.soton.emf.controlabstraction.ErrorType;
-import ac.soton.emf.controlabstraction.Failure;
 import ac.soton.emf.controlabstraction.State;
+import ac.soton.emf.controlabstraction.ThreatCondition;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -99,7 +99,14 @@ public class ControlabstractionPackageImpl extends EPackageImpl implements Contr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass failureEClass = null;
+	private EClass threatConditionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass systemEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -126,7 +133,6 @@ public class ControlabstractionPackageImpl extends EPackageImpl implements Contr
 	private ControlabstractionPackageImpl() {
 		super(eNS_URI, ControlabstractionFactory.eINSTANCE);
 	}
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -385,8 +391,8 @@ public class ControlabstractionPackageImpl extends EPackageImpl implements Contr
 	 * @generated
 	 */
 	@Override
-	public EClass getFailure() {
-		return failureEClass;
+	public EClass getThreatCondition() {
+		return threatConditionEClass;
 	}
 
 	/**
@@ -395,8 +401,38 @@ public class ControlabstractionPackageImpl extends EPackageImpl implements Contr
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFailure_Mitigation() {
-		return (EAttribute)failureEClass.getEStructuralFeatures().get(0);
+	public EAttribute getThreatCondition_Mitigation() {
+		return (EAttribute)threatConditionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSystem() {
+		return systemEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSystem_Entities() {
+		return (EReference)systemEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSystem_Purpose() {
+		return (EAttribute)systemEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -468,8 +504,12 @@ public class ControlabstractionPackageImpl extends EPackageImpl implements Contr
 		createEAttribute(errorEClass, ERROR__TYPE);
 		createEReference(errorEClass, ERROR__FAILURE);
 
-		failureEClass = createEClass(FAILURE);
-		createEAttribute(failureEClass, FAILURE__MITIGATION);
+		threatConditionEClass = createEClass(THREAT_CONDITION);
+		createEAttribute(threatConditionEClass, THREAT_CONDITION__MITIGATION);
+
+		systemEClass = createEClass(SYSTEM);
+		createEReference(systemEClass, SYSTEM__ENTITIES);
+		createEAttribute(systemEClass, SYSTEM__PURPOSE);
 
 		// Create enums
 		errorTypeEEnum = createEEnum(ERROR_TYPE);
@@ -512,8 +552,9 @@ public class ControlabstractionPackageImpl extends EPackageImpl implements Contr
 		stateEClass.getESuperTypes().add(this.getAbstractNamedElement());
 		actorEClass.getESuperTypes().add(this.getAgent());
 		errorEClass.getESuperTypes().add(this.getAbstractNamedElement());
-		failureEClass.getESuperTypes().add(this.getAbstractNamedElement());
-		failureEClass.getESuperTypes().add(this.getState());
+		threatConditionEClass.getESuperTypes().add(this.getAbstractNamedElement());
+		threatConditionEClass.getESuperTypes().add(this.getState());
+		systemEClass.getESuperTypes().add(this.getAbstractNamedElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(componentEClass, Component.class, "Component", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -544,10 +585,14 @@ public class ControlabstractionPackageImpl extends EPackageImpl implements Contr
 
 		initEClass(errorEClass, ac.soton.emf.controlabstraction.Error.class, "Error", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getError_Type(), this.getErrorType(), "type", null, 0, 1, ac.soton.emf.controlabstraction.Error.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getError_Failure(), this.getFailure(), null, "failure", null, 0, 1, ac.soton.emf.controlabstraction.Error.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getError_Failure(), this.getThreatCondition(), null, "failure", null, 0, 1, ac.soton.emf.controlabstraction.Error.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(failureEClass, Failure.class, "Failure", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFailure_Mitigation(), ecorePackage.getEString(), "mitigation", null, 0, 1, Failure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(threatConditionEClass, ThreatCondition.class, "ThreatCondition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getThreatCondition_Mitigation(), ecorePackage.getEString(), "mitigation", null, 0, 1, ThreatCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(systemEClass, ac.soton.emf.controlabstraction.System.class, "System", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSystem_Entities(), this.getAbstractStatefulEntity(), null, "entities", null, 0, -1, ac.soton.emf.controlabstraction.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSystem_Purpose(), ecorePackage.getEString(), "purpose", null, 0, 1, ac.soton.emf.controlabstraction.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(errorTypeEEnum, ErrorType.class, "ErrorType");

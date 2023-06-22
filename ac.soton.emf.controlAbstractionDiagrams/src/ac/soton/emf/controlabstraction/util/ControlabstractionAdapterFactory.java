@@ -11,8 +11,8 @@ import ac.soton.emf.controlabstraction.Agent;
 import ac.soton.emf.controlabstraction.Assumption;
 import ac.soton.emf.controlabstraction.Component;
 import ac.soton.emf.controlabstraction.ControlabstractionPackage;
-import ac.soton.emf.controlabstraction.Failure;
 import ac.soton.emf.controlabstraction.State;
+import ac.soton.emf.controlabstraction.ThreatCondition;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -114,8 +114,12 @@ public class ControlabstractionAdapterFactory extends AdapterFactoryImpl {
 				return createErrorAdapter();
 			}
 			@Override
-			public Adapter caseFailure(Failure object) {
-				return createFailureAdapter();
+			public Adapter caseThreatCondition(ThreatCondition object) {
+				return createThreatConditionAdapter();
+			}
+			@Override
+			public Adapter caseSystem(ac.soton.emf.controlabstraction.System object) {
+				return createSystemAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -264,16 +268,30 @@ public class ControlabstractionAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ac.soton.emf.controlabstraction.Failure <em>Failure</em>}'.
+	 * Creates a new adapter for an object of class '{@link ac.soton.emf.controlabstraction.ThreatCondition <em>Threat Condition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ac.soton.emf.controlabstraction.Failure
+	 * @see ac.soton.emf.controlabstraction.ThreatCondition
 	 * @generated
 	 */
-	public Adapter createFailureAdapter() {
+	public Adapter createThreatConditionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ac.soton.emf.controlabstraction.System <em>System</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ac.soton.emf.controlabstraction.System
+	 * @generated
+	 */
+	public Adapter createSystemAdapter() {
 		return null;
 	}
 

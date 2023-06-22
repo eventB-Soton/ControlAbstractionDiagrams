@@ -13,8 +13,8 @@ import ac.soton.emf.controlabstraction.Component;
 import ac.soton.emf.controlabstraction.ControlabstractionFactory;
 import ac.soton.emf.controlabstraction.ControlabstractionPackage;
 import ac.soton.emf.controlabstraction.ErrorType;
-import ac.soton.emf.controlabstraction.Failure;
 import ac.soton.emf.controlabstraction.State;
+import ac.soton.emf.controlabstraction.ThreatCondition;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -78,7 +78,8 @@ public class ControlabstractionFactoryImpl extends EFactoryImpl implements Contr
 			case ControlabstractionPackage.ABSTRACT_NAMED_ELEMENT: return createAbstractNamedElement();
 			case ControlabstractionPackage.ACTOR: return createActor();
 			case ControlabstractionPackage.ERROR: return createError();
-			case ControlabstractionPackage.FAILURE: return createFailure();
+			case ControlabstractionPackage.THREAT_CONDITION: return createThreatCondition();
+			case ControlabstractionPackage.SYSTEM: return createSystem();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -219,9 +220,20 @@ public class ControlabstractionFactoryImpl extends EFactoryImpl implements Contr
 	 * @generated
 	 */
 	@Override
-	public Failure createFailure() {
-		FailureImpl failure = new FailureImpl();
-		return failure;
+	public ThreatCondition createThreatCondition() {
+		ThreatConditionImpl threatCondition = new ThreatConditionImpl();
+		return threatCondition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ac.soton.emf.controlabstraction.System createSystem() {
+		SystemImpl system = new SystemImpl();
+		return system;
 	}
 
 	/**

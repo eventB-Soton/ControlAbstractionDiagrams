@@ -282,26 +282,49 @@ public class ControlabstractionItemProviderAdapterFactory extends Controlabstrac
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ac.soton.emf.controlabstraction.Failure} instances.
+	 * This keeps track of the one adapter used for all {@link ac.soton.emf.controlabstraction.ThreatCondition} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FailureItemProvider failureItemProvider;
+	protected ThreatConditionItemProvider threatConditionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link ac.soton.emf.controlabstraction.Failure}.
+	 * This creates an adapter for a {@link ac.soton.emf.controlabstraction.ThreatCondition}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createFailureAdapter() {
-		if (failureItemProvider == null) {
-			failureItemProvider = new FailureItemProvider(this);
+	public Adapter createThreatConditionAdapter() {
+		if (threatConditionItemProvider == null) {
+			threatConditionItemProvider = new ThreatConditionItemProvider(this);
 		}
 
-		return failureItemProvider;
+		return threatConditionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link ac.soton.emf.controlabstraction.System} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SystemItemProvider systemItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ac.soton.emf.controlabstraction.System}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSystemAdapter() {
+		if (systemItemProvider == null) {
+			systemItemProvider = new SystemItemProvider(this);
+		}
+
+		return systemItemProvider;
 	}
 
 	/**
@@ -418,7 +441,8 @@ public class ControlabstractionItemProviderAdapterFactory extends Controlabstrac
 		if (abstractNamedElementItemProvider != null) abstractNamedElementItemProvider.dispose();
 		if (actorItemProvider != null) actorItemProvider.dispose();
 		if (errorItemProvider != null) errorItemProvider.dispose();
-		if (failureItemProvider != null) failureItemProvider.dispose();
+		if (threatConditionItemProvider != null) threatConditionItemProvider.dispose();
+		if (systemItemProvider != null) systemItemProvider.dispose();
 	}
 
 }
