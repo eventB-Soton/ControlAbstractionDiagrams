@@ -19,7 +19,7 @@
         eType="#//Error" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="State" eSuperTypes="#//AbstractNamedElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="AbstractStatefulEntity">
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractStatefulEntity" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="states" upperBound="-1"
         eType="#//State" containment="true"/>
   </eClassifiers>
