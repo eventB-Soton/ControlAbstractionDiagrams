@@ -27,6 +27,13 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
           </style>
         </nodeMappings>
+        <nodeMappings name="Assumption  Node" label="Assumption Node" semanticCandidatesExpression="feature:eAllContents" domainClass="controlabstraction::Assumption">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="10" showIcon="false" labelExpression="aql:self.name+': '+self.description" tooltipExpression="an asssumption about the behaviour of  an actorr" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/ac.soton.emf.controlAbstractDiagrams.sirius/images/assumption.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+            <labelFormat>italic</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
         <edgeMappings name="ActionEdge" label="Action" sourceMapping="//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@nodeMappings[name='AgentNode']" targetMapping="//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@nodeMappings[name='ComponentNode']" targetFinderExpression="target" sourceFinderExpression="[eContainer()]" domainClass="Action" useDomainElement="true">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
