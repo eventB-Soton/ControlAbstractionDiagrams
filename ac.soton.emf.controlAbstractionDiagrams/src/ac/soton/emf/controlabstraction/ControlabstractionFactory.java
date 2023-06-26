@@ -41,15 +41,6 @@ public interface ControlabstractionFactory extends EFactory {
 	Agent createAgent();
 
 	/**
-	 * Returns a new object of class '<em>Assumption</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Assumption</em>'.
-	 * @generated
-	 */
-	Assumption createAssumption();
-
-	/**
 	 * Returns a new object of class '<em>Action</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -66,24 +57,6 @@ public interface ControlabstractionFactory extends EFactory {
 	 * @generated
 	 */
 	State createState();
-
-	/**
-	 * Returns a new object of class '<em>Abstract Stateful Entity</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Abstract Stateful Entity</em>'.
-	 * @generated
-	 */
-	AbstractStatefulEntity createAbstractStatefulEntity();
-
-	/**
-	 * Returns a new object of class '<em>Abstract Named Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Abstract Named Element</em>'.
-	 * @generated
-	 */
-	AbstractNamedElement createAbstractNamedElement();
 
 	/**
 	 * Returns a new object of class '<em>Actor</em>'.
@@ -120,6 +93,15 @@ public interface ControlabstractionFactory extends EFactory {
 	 * @generated
 	 */
 	System createSystem();
+
+	/**
+	 * Returns a new object of class '<em>Condition</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Condition</em>'.
+	 * @generated
+	 */
+	Condition createCondition();
 
 	/**
 	 * Returns the package supported by this factory.

@@ -16,8 +16,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -34,7 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class AbstractStatefulEntityImpl extends MinimalEObjectImpl.Container implements AbstractStatefulEntity {
+public abstract class AbstractStatefulEntityImpl extends AbstractEntityImpl implements AbstractStatefulEntity {
 	/**
 	 * The cached value of the '{@link #getStates() <em>States</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

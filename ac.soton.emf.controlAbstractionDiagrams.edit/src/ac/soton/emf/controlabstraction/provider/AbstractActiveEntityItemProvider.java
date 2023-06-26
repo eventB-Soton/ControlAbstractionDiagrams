@@ -4,7 +4,7 @@
 package ac.soton.emf.controlabstraction.provider;
 
 
-import ac.soton.emf.controlabstraction.AbstractStatefulEntity;
+import ac.soton.emf.controlabstraction.AbstractActiveEntity;
 import ac.soton.emf.controlabstraction.ControlabstractionFactory;
 import ac.soton.emf.controlabstraction.ControlabstractionPackage;
 
@@ -20,19 +20,19 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link ac.soton.emf.controlabstraction.AbstractStatefulEntity} object.
+ * This is the item provider adapter for a {@link ac.soton.emf.controlabstraction.AbstractActiveEntity} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class AbstractStatefulEntityItemProvider extends AbstractEntityItemProvider {
+public class AbstractActiveEntityItemProvider extends AbstractEntityItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AbstractStatefulEntityItemProvider(AdapterFactory adapterFactory) {
+	public AbstractActiveEntityItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -63,7 +63,7 @@ public class AbstractStatefulEntityItemProvider extends AbstractEntityItemProvid
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ControlabstractionPackage.Literals.ABSTRACT_STATEFUL_ENTITY__STATES);
+			childrenFeatures.add(ControlabstractionPackage.Literals.ABSTRACT_ACTIVE_ENTITY__ACTIONS);
 		}
 		return childrenFeatures;
 	}
@@ -82,14 +82,14 @@ public class AbstractStatefulEntityItemProvider extends AbstractEntityItemProvid
 	}
 
 	/**
-	 * This returns AbstractStatefulEntity.gif.
+	 * This returns AbstractActiveEntity.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/AbstractStatefulEntity"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/AbstractActiveEntity"));
 	}
 
 	/**
@@ -100,10 +100,10 @@ public class AbstractStatefulEntityItemProvider extends AbstractEntityItemProvid
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((AbstractStatefulEntity)object).getName();
+		String label = ((AbstractActiveEntity)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_AbstractStatefulEntity_type") :
-			getString("_UI_AbstractStatefulEntity_type") + " " + label;
+			getString("_UI_AbstractActiveEntity_type") :
+			getString("_UI_AbstractActiveEntity_type") + " " + label;
 	}
 
 
@@ -118,8 +118,8 @@ public class AbstractStatefulEntityItemProvider extends AbstractEntityItemProvid
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(AbstractStatefulEntity.class)) {
-			case ControlabstractionPackage.ABSTRACT_STATEFUL_ENTITY__STATES:
+		switch (notification.getFeatureID(AbstractActiveEntity.class)) {
+			case ControlabstractionPackage.ABSTRACT_ACTIVE_ENTITY__ACTIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -139,13 +139,8 @@ public class AbstractStatefulEntityItemProvider extends AbstractEntityItemProvid
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ControlabstractionPackage.Literals.ABSTRACT_STATEFUL_ENTITY__STATES,
-				 ControlabstractionFactory.eINSTANCE.createState()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ControlabstractionPackage.Literals.ABSTRACT_STATEFUL_ENTITY__STATES,
-				 ControlabstractionFactory.eINSTANCE.createThreatCondition()));
+				(ControlabstractionPackage.Literals.ABSTRACT_ACTIVE_ENTITY__ACTIONS,
+				 ControlabstractionFactory.eINSTANCE.createAction()));
 	}
 
 }

@@ -50,7 +50,6 @@ public class ActionItemProvider extends AbstractNamedElementItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addConditionsPropertyDescriptor(object);
-			addReliancesPropertyDescriptor(object);
 			addActionPropertyDescriptor(object);
 			addTargetPropertyDescriptor(object);
 		}
@@ -71,28 +70,6 @@ public class ActionItemProvider extends AbstractNamedElementItemProvider {
 				 getString("_UI_Action_conditions_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Action_conditions_feature", "_UI_Action_type"),
 				 ControlabstractionPackage.Literals.ACTION__CONDITIONS,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Reliances feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addReliancesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Action_reliances_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Action_reliances_feature", "_UI_Action_type"),
-				 ControlabstractionPackage.Literals.ACTION__RELIANCES,
 				 true,
 				 false,
 				 true,
@@ -157,7 +134,9 @@ public class ActionItemProvider extends AbstractNamedElementItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(ControlabstractionPackage.Literals.ACTION__CONDITIONS);
 			childrenFeatures.add(ControlabstractionPackage.Literals.ACTION__ERRORS);
+			childrenFeatures.add(ControlabstractionPackage.Literals.ACTION__RESULT);
 		}
 		return childrenFeatures;
 	}
@@ -216,7 +195,9 @@ public class ActionItemProvider extends AbstractNamedElementItemProvider {
 			case ControlabstractionPackage.ACTION__ACTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
+			case ControlabstractionPackage.ACTION__CONDITIONS:
 			case ControlabstractionPackage.ACTION__ERRORS:
+			case ControlabstractionPackage.ACTION__RESULT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -236,8 +217,23 @@ public class ActionItemProvider extends AbstractNamedElementItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
+				(ControlabstractionPackage.Literals.ACTION__CONDITIONS,
+				 ControlabstractionFactory.eINSTANCE.createCondition()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(ControlabstractionPackage.Literals.ACTION__ERRORS,
 				 ControlabstractionFactory.eINSTANCE.createError()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ControlabstractionPackage.Literals.ACTION__RESULT,
+				 ControlabstractionFactory.eINSTANCE.createState()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ControlabstractionPackage.Literals.ACTION__RESULT,
+				 ControlabstractionFactory.eINSTANCE.createThreatCondition()));
 	}
 
 }

@@ -66,7 +66,7 @@ public interface ControlabstractionPackage extends EPackage {
 	 * @see ac.soton.emf.controlabstraction.impl.ControlabstractionPackageImpl#getAbstractNamedElement()
 	 * @generated
 	 */
-	int ABSTRACT_NAMED_ELEMENT = 6;
+	int ABSTRACT_NAMED_ELEMENT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -105,6 +105,107 @@ public interface ControlabstractionPackage extends EPackage {
 	int ABSTRACT_NAMED_ELEMENT_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link ac.soton.emf.controlabstraction.impl.AbstractEntityImpl <em>Abstract Entity</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ac.soton.emf.controlabstraction.impl.AbstractEntityImpl
+	 * @see ac.soton.emf.controlabstraction.impl.ControlabstractionPackageImpl#getAbstractEntity()
+	 * @generated
+	 */
+	int ABSTRACT_ENTITY = 10;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_ENTITY__NAME = ABSTRACT_NAMED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_ENTITY__DESCRIPTION = ABSTRACT_NAMED_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The number of structural features of the '<em>Abstract Entity</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_ENTITY_FEATURE_COUNT = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Abstract Entity</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_ENTITY_OPERATION_COUNT = ABSTRACT_NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link ac.soton.emf.controlabstraction.impl.AbstractStatefulEntityImpl <em>Abstract Stateful Entity</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ac.soton.emf.controlabstraction.impl.AbstractStatefulEntityImpl
+	 * @see ac.soton.emf.controlabstraction.impl.ControlabstractionPackageImpl#getAbstractStatefulEntity()
+	 * @generated
+	 */
+	int ABSTRACT_STATEFUL_ENTITY = 4;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_STATEFUL_ENTITY__NAME = ABSTRACT_ENTITY__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_STATEFUL_ENTITY__DESCRIPTION = ABSTRACT_ENTITY__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>States</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_STATEFUL_ENTITY__STATES = ABSTRACT_ENTITY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Abstract Stateful Entity</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_STATEFUL_ENTITY_FEATURE_COUNT = ABSTRACT_ENTITY_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Abstract Stateful Entity</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_STATEFUL_ENTITY_OPERATION_COUNT = ABSTRACT_ENTITY_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link ac.soton.emf.controlabstraction.impl.ComponentImpl <em>Component</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -121,7 +222,7 @@ public interface ControlabstractionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT__NAME = ABSTRACT_NAMED_ELEMENT__NAME;
+	int COMPONENT__NAME = ABSTRACT_STATEFUL_ENTITY__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -130,7 +231,7 @@ public interface ControlabstractionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT__DESCRIPTION = ABSTRACT_NAMED_ELEMENT__DESCRIPTION;
+	int COMPONENT__DESCRIPTION = ABSTRACT_STATEFUL_ENTITY__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>States</b></em>' containment reference list.
@@ -139,7 +240,7 @@ public interface ControlabstractionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT__STATES = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 0;
+	int COMPONENT__STATES = ABSTRACT_STATEFUL_ENTITY__STATES;
 
 	/**
 	 * The number of structural features of the '<em>Component</em>' class.
@@ -148,7 +249,7 @@ public interface ControlabstractionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_FEATURE_COUNT = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int COMPONENT_FEATURE_COUNT = ABSTRACT_STATEFUL_ENTITY_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Component</em>' class.
@@ -157,7 +258,62 @@ public interface ControlabstractionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_OPERATION_COUNT = ABSTRACT_NAMED_ELEMENT_OPERATION_COUNT + 0;
+	int COMPONENT_OPERATION_COUNT = ABSTRACT_STATEFUL_ENTITY_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link ac.soton.emf.controlabstraction.impl.AbstractActiveEntityImpl <em>Abstract Active Entity</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ac.soton.emf.controlabstraction.impl.AbstractActiveEntityImpl
+	 * @see ac.soton.emf.controlabstraction.impl.ControlabstractionPackageImpl#getAbstractActiveEntity()
+	 * @generated
+	 */
+	int ABSTRACT_ACTIVE_ENTITY = 11;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_ACTIVE_ENTITY__NAME = ABSTRACT_ENTITY__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_ACTIVE_ENTITY__DESCRIPTION = ABSTRACT_ENTITY__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Actions</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_ACTIVE_ENTITY__ACTIONS = ABSTRACT_ENTITY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Abstract Active Entity</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_ACTIVE_ENTITY_FEATURE_COUNT = ABSTRACT_ENTITY_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Abstract Active Entity</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_ACTIVE_ENTITY_OPERATION_COUNT = ABSTRACT_ENTITY_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link ac.soton.emf.controlabstraction.impl.AgentImpl <em>Agent</em>}' class.
@@ -176,7 +332,7 @@ public interface ControlabstractionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AGENT__NAME = ABSTRACT_NAMED_ELEMENT__NAME;
+	int AGENT__NAME = ABSTRACT_ACTIVE_ENTITY__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -185,16 +341,7 @@ public interface ControlabstractionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AGENT__DESCRIPTION = ABSTRACT_NAMED_ELEMENT__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>States</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AGENT__STATES = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 0;
+	int AGENT__DESCRIPTION = ABSTRACT_ACTIVE_ENTITY__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference.
@@ -203,7 +350,7 @@ public interface ControlabstractionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AGENT__ACTIONS = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int AGENT__ACTIONS = ABSTRACT_ACTIVE_ENTITY__ACTIONS;
 
 	/**
 	 * The number of structural features of the '<em>Agent</em>' class.
@@ -212,7 +359,7 @@ public interface ControlabstractionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AGENT_FEATURE_COUNT = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int AGENT_FEATURE_COUNT = ABSTRACT_ACTIVE_ENTITY_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Agent</em>' class.
@@ -221,53 +368,7 @@ public interface ControlabstractionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AGENT_OPERATION_COUNT = ABSTRACT_NAMED_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link ac.soton.emf.controlabstraction.impl.AssumptionImpl <em>Assumption</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ac.soton.emf.controlabstraction.impl.AssumptionImpl
-	 * @see ac.soton.emf.controlabstraction.impl.ControlabstractionPackageImpl#getAssumption()
-	 * @generated
-	 */
-	int ASSUMPTION = 2;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSUMPTION__NAME = ABSTRACT_NAMED_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSUMPTION__DESCRIPTION = ABSTRACT_NAMED_ELEMENT__DESCRIPTION;
-
-	/**
-	 * The number of structural features of the '<em>Assumption</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSUMPTION_FEATURE_COUNT = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Assumption</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSUMPTION_OPERATION_COUNT = ABSTRACT_NAMED_ELEMENT_OPERATION_COUNT + 0;
+	int AGENT_OPERATION_COUNT = ABSTRACT_ACTIVE_ENTITY_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link ac.soton.emf.controlabstraction.impl.ActionImpl <em>Action</em>}' class.
@@ -277,7 +378,7 @@ public interface ControlabstractionPackage extends EPackage {
 	 * @see ac.soton.emf.controlabstraction.impl.ControlabstractionPackageImpl#getAction()
 	 * @generated
 	 */
-	int ACTION = 3;
+	int ACTION = 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -298,7 +399,7 @@ public interface ControlabstractionPackage extends EPackage {
 	int ACTION__DESCRIPTION = ABSTRACT_NAMED_ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Conditions</b></em>' reference list.
+	 * The feature id for the '<em><b>Conditions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -307,22 +408,13 @@ public interface ControlabstractionPackage extends EPackage {
 	int ACTION__CONDITIONS = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Reliances</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTION__RELIANCES = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Action</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__ACTION = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int ACTION__ACTION = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -331,7 +423,7 @@ public interface ControlabstractionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__TARGET = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 3;
+	int ACTION__TARGET = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Errors</b></em>' containment reference list.
@@ -340,7 +432,16 @@ public interface ControlabstractionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__ERRORS = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 4;
+	int ACTION__ERRORS = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Result</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION__RESULT = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Action</em>' class.
@@ -368,7 +469,7 @@ public interface ControlabstractionPackage extends EPackage {
 	 * @see ac.soton.emf.controlabstraction.impl.ControlabstractionPackageImpl#getState()
 	 * @generated
 	 */
-	int STATE = 4;
+	int STATE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -407,43 +508,6 @@ public interface ControlabstractionPackage extends EPackage {
 	int STATE_OPERATION_COUNT = ABSTRACT_NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link ac.soton.emf.controlabstraction.impl.AbstractStatefulEntityImpl <em>Abstract Stateful Entity</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ac.soton.emf.controlabstraction.impl.AbstractStatefulEntityImpl
-	 * @see ac.soton.emf.controlabstraction.impl.ControlabstractionPackageImpl#getAbstractStatefulEntity()
-	 * @generated
-	 */
-	int ABSTRACT_STATEFUL_ENTITY = 5;
-
-	/**
-	 * The feature id for the '<em><b>States</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_STATEFUL_ENTITY__STATES = 0;
-
-	/**
-	 * The number of structural features of the '<em>Abstract Stateful Entity</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_STATEFUL_ENTITY_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Abstract Stateful Entity</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_STATEFUL_ENTITY_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link ac.soton.emf.controlabstraction.impl.ActorImpl <em>Actor</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -451,7 +515,7 @@ public interface ControlabstractionPackage extends EPackage {
 	 * @see ac.soton.emf.controlabstraction.impl.ControlabstractionPackageImpl#getActor()
 	 * @generated
 	 */
-	int ACTOR = 7;
+	int ACTOR = 6;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -460,7 +524,7 @@ public interface ControlabstractionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTOR__NAME = AGENT__NAME;
+	int ACTOR__NAME = ABSTRACT_ACTIVE_ENTITY__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -469,16 +533,7 @@ public interface ControlabstractionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTOR__DESCRIPTION = AGENT__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>States</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTOR__STATES = AGENT__STATES;
+	int ACTOR__DESCRIPTION = ABSTRACT_ACTIVE_ENTITY__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference.
@@ -487,16 +542,7 @@ public interface ControlabstractionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTOR__ACTIONS = AGENT__ACTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Assumptions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTOR__ASSUMPTIONS = AGENT_FEATURE_COUNT + 0;
+	int ACTOR__ACTIONS = ABSTRACT_ACTIVE_ENTITY__ACTIONS;
 
 	/**
 	 * The number of structural features of the '<em>Actor</em>' class.
@@ -505,7 +551,7 @@ public interface ControlabstractionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTOR_FEATURE_COUNT = AGENT_FEATURE_COUNT + 1;
+	int ACTOR_FEATURE_COUNT = ABSTRACT_ACTIVE_ENTITY_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Actor</em>' class.
@@ -514,7 +560,7 @@ public interface ControlabstractionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTOR_OPERATION_COUNT = AGENT_OPERATION_COUNT + 0;
+	int ACTOR_OPERATION_COUNT = ABSTRACT_ACTIVE_ENTITY_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link ac.soton.emf.controlabstraction.impl.ErrorImpl <em>Error</em>}' class.
@@ -524,7 +570,7 @@ public interface ControlabstractionPackage extends EPackage {
 	 * @see ac.soton.emf.controlabstraction.impl.ControlabstractionPackageImpl#getError()
 	 * @generated
 	 */
-	int ERROR = 8;
+	int ERROR = 7;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -588,7 +634,7 @@ public interface ControlabstractionPackage extends EPackage {
 	 * @see ac.soton.emf.controlabstraction.impl.ControlabstractionPackageImpl#getThreatCondition()
 	 * @generated
 	 */
-	int THREAT_CONDITION = 9;
+	int THREAT_CONDITION = 8;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -643,7 +689,7 @@ public interface ControlabstractionPackage extends EPackage {
 	 * @see ac.soton.emf.controlabstraction.impl.ControlabstractionPackageImpl#getSystem()
 	 * @generated
 	 */
-	int SYSTEM = 10;
+	int SYSTEM = 9;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -700,6 +746,70 @@ public interface ControlabstractionPackage extends EPackage {
 	int SYSTEM_OPERATION_COUNT = ABSTRACT_NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link ac.soton.emf.controlabstraction.impl.ConditionImpl <em>Condition</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ac.soton.emf.controlabstraction.impl.ConditionImpl
+	 * @see ac.soton.emf.controlabstraction.impl.ControlabstractionPackageImpl#getCondition()
+	 * @generated
+	 */
+	int CONDITION = 12;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION__NAME = ABSTRACT_NAMED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION__DESCRIPTION = ABSTRACT_NAMED_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>State</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION__STATE = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Assumption</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION__ASSUMPTION = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Condition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION_FEATURE_COUNT = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Condition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION_OPERATION_COUNT = ABSTRACT_NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link ac.soton.emf.controlabstraction.ErrorType <em>Error Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -707,7 +817,7 @@ public interface ControlabstractionPackage extends EPackage {
 	 * @see ac.soton.emf.controlabstraction.impl.ControlabstractionPackageImpl#getErrorType()
 	 * @generated
 	 */
-	int ERROR_TYPE = 11;
+	int ERROR_TYPE = 13;
 
 
 	/**
@@ -731,27 +841,6 @@ public interface ControlabstractionPackage extends EPackage {
 	EClass getAgent();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link ac.soton.emf.controlabstraction.Agent#getActions <em>Actions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Actions</em>'.
-	 * @see ac.soton.emf.controlabstraction.Agent#getActions()
-	 * @see #getAgent()
-	 * @generated
-	 */
-	EReference getAgent_Actions();
-
-	/**
-	 * Returns the meta object for class '{@link ac.soton.emf.controlabstraction.Assumption <em>Assumption</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Assumption</em>'.
-	 * @see ac.soton.emf.controlabstraction.Assumption
-	 * @generated
-	 */
-	EClass getAssumption();
-
-	/**
 	 * Returns the meta object for class '{@link ac.soton.emf.controlabstraction.Action <em>Action</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -762,26 +851,15 @@ public interface ControlabstractionPackage extends EPackage {
 	EClass getAction();
 
 	/**
-	 * Returns the meta object for the reference list '{@link ac.soton.emf.controlabstraction.Action#getConditions <em>Conditions</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ac.soton.emf.controlabstraction.Action#getConditions <em>Conditions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Conditions</em>'.
+	 * @return the meta object for the containment reference list '<em>Conditions</em>'.
 	 * @see ac.soton.emf.controlabstraction.Action#getConditions()
 	 * @see #getAction()
 	 * @generated
 	 */
 	EReference getAction_Conditions();
-
-	/**
-	 * Returns the meta object for the reference list '{@link ac.soton.emf.controlabstraction.Action#getReliances <em>Reliances</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Reliances</em>'.
-	 * @see ac.soton.emf.controlabstraction.Action#getReliances()
-	 * @see #getAction()
-	 * @generated
-	 */
-	EReference getAction_Reliances();
 
 	/**
 	 * Returns the meta object for the attribute '{@link ac.soton.emf.controlabstraction.Action#getAction <em>Action</em>}'.
@@ -815,6 +893,17 @@ public interface ControlabstractionPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getAction_Errors();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link ac.soton.emf.controlabstraction.Action#getResult <em>Result</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Result</em>'.
+	 * @see ac.soton.emf.controlabstraction.Action#getResult()
+	 * @see #getAction()
+	 * @generated
+	 */
+	EReference getAction_Result();
 
 	/**
 	 * Returns the meta object for class '{@link ac.soton.emf.controlabstraction.State <em>State</em>}'.
@@ -888,17 +977,6 @@ public interface ControlabstractionPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getActor();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link ac.soton.emf.controlabstraction.Actor#getAssumptions <em>Assumptions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Assumptions</em>'.
-	 * @see ac.soton.emf.controlabstraction.Actor#getAssumptions()
-	 * @see #getActor()
-	 * @generated
-	 */
-	EReference getActor_Assumptions();
 
 	/**
 	 * Returns the meta object for class '{@link ac.soton.emf.controlabstraction.Error <em>Error</em>}'.
@@ -986,6 +1064,69 @@ public interface ControlabstractionPackage extends EPackage {
 	EAttribute getSystem_Purpose();
 
 	/**
+	 * Returns the meta object for class '{@link ac.soton.emf.controlabstraction.AbstractEntity <em>Abstract Entity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Abstract Entity</em>'.
+	 * @see ac.soton.emf.controlabstraction.AbstractEntity
+	 * @generated
+	 */
+	EClass getAbstractEntity();
+
+	/**
+	 * Returns the meta object for class '{@link ac.soton.emf.controlabstraction.AbstractActiveEntity <em>Abstract Active Entity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Abstract Active Entity</em>'.
+	 * @see ac.soton.emf.controlabstraction.AbstractActiveEntity
+	 * @generated
+	 */
+	EClass getAbstractActiveEntity();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link ac.soton.emf.controlabstraction.AbstractActiveEntity#getActions <em>Actions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Actions</em>'.
+	 * @see ac.soton.emf.controlabstraction.AbstractActiveEntity#getActions()
+	 * @see #getAbstractActiveEntity()
+	 * @generated
+	 */
+	EReference getAbstractActiveEntity_Actions();
+
+	/**
+	 * Returns the meta object for class '{@link ac.soton.emf.controlabstraction.Condition <em>Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Condition</em>'.
+	 * @see ac.soton.emf.controlabstraction.Condition
+	 * @generated
+	 */
+	EClass getCondition();
+
+	/**
+	 * Returns the meta object for the reference '{@link ac.soton.emf.controlabstraction.Condition#getState <em>State</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>State</em>'.
+	 * @see ac.soton.emf.controlabstraction.Condition#getState()
+	 * @see #getCondition()
+	 * @generated
+	 */
+	EReference getCondition_State();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ac.soton.emf.controlabstraction.Condition#isAssumption <em>Assumption</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Assumption</em>'.
+	 * @see ac.soton.emf.controlabstraction.Condition#isAssumption()
+	 * @see #getCondition()
+	 * @generated
+	 */
+	EAttribute getCondition_Assumption();
+
+	/**
 	 * Returns the meta object for enum '{@link ac.soton.emf.controlabstraction.ErrorType <em>Error Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1039,24 +1180,6 @@ public interface ControlabstractionPackage extends EPackage {
 		EClass AGENT = eINSTANCE.getAgent();
 
 		/**
-		 * The meta object literal for the '<em><b>Actions</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference AGENT__ACTIONS = eINSTANCE.getAgent_Actions();
-
-		/**
-		 * The meta object literal for the '{@link ac.soton.emf.controlabstraction.impl.AssumptionImpl <em>Assumption</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ac.soton.emf.controlabstraction.impl.AssumptionImpl
-		 * @see ac.soton.emf.controlabstraction.impl.ControlabstractionPackageImpl#getAssumption()
-		 * @generated
-		 */
-		EClass ASSUMPTION = eINSTANCE.getAssumption();
-
-		/**
 		 * The meta object literal for the '{@link ac.soton.emf.controlabstraction.impl.ActionImpl <em>Action</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1067,20 +1190,12 @@ public interface ControlabstractionPackage extends EPackage {
 		EClass ACTION = eINSTANCE.getAction();
 
 		/**
-		 * The meta object literal for the '<em><b>Conditions</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Conditions</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference ACTION__CONDITIONS = eINSTANCE.getAction_Conditions();
-
-		/**
-		 * The meta object literal for the '<em><b>Reliances</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ACTION__RELIANCES = eINSTANCE.getAction_Reliances();
 
 		/**
 		 * The meta object literal for the '<em><b>Action</b></em>' attribute feature.
@@ -1105,6 +1220,14 @@ public interface ControlabstractionPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ACTION__ERRORS = eINSTANCE.getAction_Errors();
+
+		/**
+		 * The meta object literal for the '<em><b>Result</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ACTION__RESULT = eINSTANCE.getAction_Result();
 
 		/**
 		 * The meta object literal for the '{@link ac.soton.emf.controlabstraction.impl.StateImpl <em>State</em>}' class.
@@ -1169,14 +1292,6 @@ public interface ControlabstractionPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ACTOR = eINSTANCE.getActor();
-
-		/**
-		 * The meta object literal for the '<em><b>Assumptions</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ACTOR__ASSUMPTIONS = eINSTANCE.getActor_Assumptions();
 
 		/**
 		 * The meta object literal for the '{@link ac.soton.emf.controlabstraction.impl.ErrorImpl <em>Error</em>}' class.
@@ -1247,6 +1362,60 @@ public interface ControlabstractionPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute SYSTEM__PURPOSE = eINSTANCE.getSystem_Purpose();
+
+		/**
+		 * The meta object literal for the '{@link ac.soton.emf.controlabstraction.impl.AbstractEntityImpl <em>Abstract Entity</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ac.soton.emf.controlabstraction.impl.AbstractEntityImpl
+		 * @see ac.soton.emf.controlabstraction.impl.ControlabstractionPackageImpl#getAbstractEntity()
+		 * @generated
+		 */
+		EClass ABSTRACT_ENTITY = eINSTANCE.getAbstractEntity();
+
+		/**
+		 * The meta object literal for the '{@link ac.soton.emf.controlabstraction.impl.AbstractActiveEntityImpl <em>Abstract Active Entity</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ac.soton.emf.controlabstraction.impl.AbstractActiveEntityImpl
+		 * @see ac.soton.emf.controlabstraction.impl.ControlabstractionPackageImpl#getAbstractActiveEntity()
+		 * @generated
+		 */
+		EClass ABSTRACT_ACTIVE_ENTITY = eINSTANCE.getAbstractActiveEntity();
+
+		/**
+		 * The meta object literal for the '<em><b>Actions</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ABSTRACT_ACTIVE_ENTITY__ACTIONS = eINSTANCE.getAbstractActiveEntity_Actions();
+
+		/**
+		 * The meta object literal for the '{@link ac.soton.emf.controlabstraction.impl.ConditionImpl <em>Condition</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ac.soton.emf.controlabstraction.impl.ConditionImpl
+		 * @see ac.soton.emf.controlabstraction.impl.ControlabstractionPackageImpl#getCondition()
+		 * @generated
+		 */
+		EClass CONDITION = eINSTANCE.getCondition();
+
+		/**
+		 * The meta object literal for the '<em><b>State</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONDITION__STATE = eINSTANCE.getCondition_State();
+
+		/**
+		 * The meta object literal for the '<em><b>Assumption</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONDITION__ASSUMPTION = eINSTANCE.getCondition_Assumption();
 
 		/**
 		 * The meta object literal for the '{@link ac.soton.emf.controlabstraction.ErrorType <em>Error Type</em>}' enum.

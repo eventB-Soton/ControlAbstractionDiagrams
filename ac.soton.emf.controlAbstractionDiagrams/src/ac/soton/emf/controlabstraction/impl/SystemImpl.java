@@ -3,7 +3,7 @@
  */
 package ac.soton.emf.controlabstraction.impl;
 
-import ac.soton.emf.controlabstraction.AbstractStatefulEntity;
+import ac.soton.emf.controlabstraction.AbstractEntity;
 import ac.soton.emf.controlabstraction.ControlabstractionPackage;
 
 import java.util.Collection;
@@ -44,7 +44,7 @@ public class SystemImpl extends AbstractNamedElementImpl implements ac.soton.emf
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<AbstractStatefulEntity> entities;
+	protected EList<AbstractEntity> entities;
 
 	/**
 	 * The default value of the '{@link #getPurpose() <em>Purpose</em>}' attribute.
@@ -91,9 +91,9 @@ public class SystemImpl extends AbstractNamedElementImpl implements ac.soton.emf
 	 * @generated
 	 */
 	@Override
-	public EList<AbstractStatefulEntity> getEntities() {
+	public EList<AbstractEntity> getEntities() {
 		if (entities == null) {
-			entities = new EObjectContainmentEList<AbstractStatefulEntity>(AbstractStatefulEntity.class, this, ControlabstractionPackage.SYSTEM__ENTITIES);
+			entities = new EObjectContainmentEList<AbstractEntity>(AbstractEntity.class, this, ControlabstractionPackage.SYSTEM__ENTITIES);
 		}
 		return entities;
 	}
@@ -162,7 +162,7 @@ public class SystemImpl extends AbstractNamedElementImpl implements ac.soton.emf
 		switch (featureID) {
 			case ControlabstractionPackage.SYSTEM__ENTITIES:
 				getEntities().clear();
-				getEntities().addAll((Collection<? extends AbstractStatefulEntity>)newValue);
+				getEntities().addAll((Collection<? extends AbstractEntity>)newValue);
 				return;
 			case ControlabstractionPackage.SYSTEM__PURPOSE:
 				setPurpose((String)newValue);

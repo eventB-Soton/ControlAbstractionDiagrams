@@ -25,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
 public interface System extends AbstractNamedElement {
 	/**
 	 * Returns the value of the '<em><b>Entities</b></em>' containment reference list.
-	 * The list contents are of type {@link ac.soton.emf.controlabstraction.AbstractStatefulEntity}.
+	 * The list contents are of type {@link ac.soton.emf.controlabstraction.AbstractEntity}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Entities</em>' containment reference list.
@@ -33,7 +33,7 @@ public interface System extends AbstractNamedElement {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<AbstractStatefulEntity> getEntities();
+	EList<AbstractEntity> getEntities();
 
 	/**
 	 * Returns the value of the '<em><b>Purpose</b></em>' attribute.

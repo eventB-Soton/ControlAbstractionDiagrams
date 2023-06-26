@@ -14,5 +14,5 @@ package ac.soton.emf.controlabstraction;
  * @model
  * @generated
  */
-public interface Component extends AbstractNamedElement, AbstractStatefulEntity {
+public interface Component extends AbstractStatefulEntity {
 } // Component

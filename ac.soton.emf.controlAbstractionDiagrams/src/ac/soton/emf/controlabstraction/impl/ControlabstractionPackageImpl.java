@@ -3,13 +3,15 @@
  */
 package ac.soton.emf.controlabstraction.impl;
 
+import ac.soton.emf.controlabstraction.AbstractActiveEntity;
+import ac.soton.emf.controlabstraction.AbstractEntity;
 import ac.soton.emf.controlabstraction.AbstractNamedElement;
 import ac.soton.emf.controlabstraction.AbstractStatefulEntity;
 import ac.soton.emf.controlabstraction.Action;
 import ac.soton.emf.controlabstraction.Actor;
 import ac.soton.emf.controlabstraction.Agent;
-import ac.soton.emf.controlabstraction.Assumption;
 import ac.soton.emf.controlabstraction.Component;
+import ac.soton.emf.controlabstraction.Condition;
 import ac.soton.emf.controlabstraction.ControlabstractionFactory;
 import ac.soton.emf.controlabstraction.ControlabstractionPackage;
 import ac.soton.emf.controlabstraction.ErrorType;
@@ -23,6 +25,8 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -44,13 +48,6 @@ public class ControlabstractionPackageImpl extends EPackageImpl implements Contr
 	 * @generated
 	 */
 	private EClass agentEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass assumptionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -113,6 +110,27 @@ public class ControlabstractionPackageImpl extends EPackageImpl implements Contr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass abstractEntityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass abstractActiveEntityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass conditionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum errorTypeEEnum = null;
 
 	/**
@@ -161,6 +179,9 @@ public class ControlabstractionPackageImpl extends EPackageImpl implements Contr
 
 		isInited = true;
 
+		// Initialize simple dependencies
+		XMLTypePackage.eINSTANCE.eClass();
+
 		// Create package meta-data objects
 		theControlabstractionPackage.createPackageContents();
 
@@ -201,26 +222,6 @@ public class ControlabstractionPackageImpl extends EPackageImpl implements Contr
 	 * @generated
 	 */
 	@Override
-	public EReference getAgent_Actions() {
-		return (EReference)agentEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getAssumption() {
-		return assumptionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getAction() {
 		return actionEClass;
 	}
@@ -241,18 +242,8 @@ public class ControlabstractionPackageImpl extends EPackageImpl implements Contr
 	 * @generated
 	 */
 	@Override
-	public EReference getAction_Reliances() {
-		return (EReference)actionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getAction_Action() {
-		return (EAttribute)actionEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)actionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -262,7 +253,7 @@ public class ControlabstractionPackageImpl extends EPackageImpl implements Contr
 	 */
 	@Override
 	public EReference getAction_Target() {
-		return (EReference)actionEClass.getEStructuralFeatures().get(3);
+		return (EReference)actionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -272,6 +263,16 @@ public class ControlabstractionPackageImpl extends EPackageImpl implements Contr
 	 */
 	@Override
 	public EReference getAction_Errors() {
+		return (EReference)actionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getAction_Result() {
 		return (EReference)actionEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -343,16 +344,6 @@ public class ControlabstractionPackageImpl extends EPackageImpl implements Contr
 	@Override
 	public EClass getActor() {
 		return actorEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getActor_Assumptions() {
-		return (EReference)actorEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -441,6 +432,66 @@ public class ControlabstractionPackageImpl extends EPackageImpl implements Contr
 	 * @generated
 	 */
 	@Override
+	public EClass getAbstractEntity() {
+		return abstractEntityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAbstractActiveEntity() {
+		return abstractActiveEntityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getAbstractActiveEntity_Actions() {
+		return (EReference)abstractActiveEntityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getCondition() {
+		return conditionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getCondition_State() {
+		return (EReference)conditionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCondition_Assumption() {
+		return (EAttribute)conditionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getErrorType() {
 		return errorTypeEEnum;
 	}
@@ -477,16 +528,13 @@ public class ControlabstractionPackageImpl extends EPackageImpl implements Contr
 		componentEClass = createEClass(COMPONENT);
 
 		agentEClass = createEClass(AGENT);
-		createEReference(agentEClass, AGENT__ACTIONS);
-
-		assumptionEClass = createEClass(ASSUMPTION);
 
 		actionEClass = createEClass(ACTION);
 		createEReference(actionEClass, ACTION__CONDITIONS);
-		createEReference(actionEClass, ACTION__RELIANCES);
 		createEAttribute(actionEClass, ACTION__ACTION);
 		createEReference(actionEClass, ACTION__TARGET);
 		createEReference(actionEClass, ACTION__ERRORS);
+		createEReference(actionEClass, ACTION__RESULT);
 
 		stateEClass = createEClass(STATE);
 
@@ -498,7 +546,6 @@ public class ControlabstractionPackageImpl extends EPackageImpl implements Contr
 		createEAttribute(abstractNamedElementEClass, ABSTRACT_NAMED_ELEMENT__DESCRIPTION);
 
 		actorEClass = createEClass(ACTOR);
-		createEReference(actorEClass, ACTOR__ASSUMPTIONS);
 
 		errorEClass = createEClass(ERROR);
 		createEAttribute(errorEClass, ERROR__TYPE);
@@ -510,6 +557,15 @@ public class ControlabstractionPackageImpl extends EPackageImpl implements Contr
 		systemEClass = createEClass(SYSTEM);
 		createEReference(systemEClass, SYSTEM__ENTITIES);
 		createEAttribute(systemEClass, SYSTEM__PURPOSE);
+
+		abstractEntityEClass = createEClass(ABSTRACT_ENTITY);
+
+		abstractActiveEntityEClass = createEClass(ABSTRACT_ACTIVE_ENTITY);
+		createEReference(abstractActiveEntityEClass, ABSTRACT_ACTIVE_ENTITY__ACTIONS);
+
+		conditionEClass = createEClass(CONDITION);
+		createEReference(conditionEClass, CONDITION__STATE);
+		createEAttribute(conditionEClass, CONDITION__ASSUMPTION);
 
 		// Create enums
 		errorTypeEEnum = createEEnum(ERROR_TYPE);
@@ -538,50 +594,50 @@ public class ControlabstractionPackageImpl extends EPackageImpl implements Contr
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		XMLTypePackage theXMLTypePackage = (XMLTypePackage)EPackage.Registry.INSTANCE.getEPackage(XMLTypePackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		componentEClass.getESuperTypes().add(this.getAbstractNamedElement());
 		componentEClass.getESuperTypes().add(this.getAbstractStatefulEntity());
-		agentEClass.getESuperTypes().add(this.getAbstractNamedElement());
-		agentEClass.getESuperTypes().add(this.getAbstractStatefulEntity());
-		assumptionEClass.getESuperTypes().add(this.getAbstractNamedElement());
+		agentEClass.getESuperTypes().add(this.getAbstractActiveEntity());
 		actionEClass.getESuperTypes().add(this.getAbstractNamedElement());
 		stateEClass.getESuperTypes().add(this.getAbstractNamedElement());
-		actorEClass.getESuperTypes().add(this.getAgent());
+		abstractStatefulEntityEClass.getESuperTypes().add(this.getAbstractEntity());
+		actorEClass.getESuperTypes().add(this.getAbstractActiveEntity());
 		errorEClass.getESuperTypes().add(this.getAbstractNamedElement());
 		threatConditionEClass.getESuperTypes().add(this.getAbstractNamedElement());
 		threatConditionEClass.getESuperTypes().add(this.getState());
 		systemEClass.getESuperTypes().add(this.getAbstractNamedElement());
+		abstractEntityEClass.getESuperTypes().add(this.getAbstractNamedElement());
+		abstractActiveEntityEClass.getESuperTypes().add(this.getAbstractEntity());
+		conditionEClass.getESuperTypes().add(this.getAbstractNamedElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(componentEClass, Component.class, "Component", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(agentEClass, Agent.class, "Agent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAgent_Actions(), this.getAction(), null, "actions", null, 0, 1, Agent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(assumptionEClass, Assumption.class, "Assumption", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(actionEClass, Action.class, "Action", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAction_Conditions(), this.getState(), null, "conditions", null, 0, -1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAction_Reliances(), this.getAssumption(), null, "reliances", null, 0, -1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAction_Conditions(), this.getCondition(), null, "conditions", null, 0, -1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAction_Action(), ecorePackage.getEString(), "action", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAction_Target(), this.getComponent(), null, "target", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAction_Target(), this.getComponent(), null, "target", null, 0, 1, Action.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getAction_Errors(), this.getError(), null, "errors", null, 0, -1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAction_Result(), this.getState(), null, "result", null, 1, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(stateEClass, State.class, "State", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(abstractStatefulEntityEClass, AbstractStatefulEntity.class, "AbstractStatefulEntity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(abstractStatefulEntityEClass, AbstractStatefulEntity.class, "AbstractStatefulEntity", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAbstractStatefulEntity_States(), this.getState(), null, "states", null, 0, -1, AbstractStatefulEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(abstractNamedElementEClass, AbstractNamedElement.class, "AbstractNamedElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(abstractNamedElementEClass, AbstractNamedElement.class, "AbstractNamedElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAbstractNamedElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, AbstractNamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAbstractNamedElement_Description(), ecorePackage.getEString(), "description", null, 0, 1, AbstractNamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(actorEClass, Actor.class, "Actor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getActor_Assumptions(), this.getAssumption(), null, "assumptions", null, 0, -1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(errorEClass, ac.soton.emf.controlabstraction.Error.class, "Error", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getError_Type(), this.getErrorType(), "type", null, 0, 1, ac.soton.emf.controlabstraction.Error.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -591,8 +647,17 @@ public class ControlabstractionPackageImpl extends EPackageImpl implements Contr
 		initEAttribute(getThreatCondition_Mitigation(), ecorePackage.getEString(), "mitigation", null, 0, 1, ThreatCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(systemEClass, ac.soton.emf.controlabstraction.System.class, "System", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSystem_Entities(), this.getAbstractStatefulEntity(), null, "entities", null, 0, -1, ac.soton.emf.controlabstraction.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSystem_Entities(), this.getAbstractEntity(), null, "entities", null, 0, -1, ac.soton.emf.controlabstraction.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSystem_Purpose(), ecorePackage.getEString(), "purpose", null, 0, 1, ac.soton.emf.controlabstraction.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(abstractEntityEClass, AbstractEntity.class, "AbstractEntity", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(abstractActiveEntityEClass, AbstractActiveEntity.class, "AbstractActiveEntity", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAbstractActiveEntity_Actions(), this.getAction(), null, "actions", null, 0, 1, AbstractActiveEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(conditionEClass, Condition.class, "Condition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCondition_State(), this.getState(), null, "state", null, 0, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCondition_Assumption(), theXMLTypePackage.getBoolean(), "assumption", "false", 0, 1, Condition.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(errorTypeEEnum, ErrorType.class, "ErrorType");

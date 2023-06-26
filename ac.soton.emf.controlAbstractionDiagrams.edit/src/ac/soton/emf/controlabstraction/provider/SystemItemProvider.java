@@ -177,11 +177,6 @@ public class SystemItemProvider extends AbstractNamedElementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(ControlabstractionPackage.Literals.SYSTEM__ENTITIES,
-				 ControlabstractionFactory.eINSTANCE.createAbstractStatefulEntity()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ControlabstractionPackage.Literals.SYSTEM__ENTITIES,
 				 ControlabstractionFactory.eINSTANCE.createActor()));
 	}
 
