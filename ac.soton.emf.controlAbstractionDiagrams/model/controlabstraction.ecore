@@ -2,8 +2,8 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="controlabstraction" nsURI="http://soton.ac.uk/models/eventb/controlabstraction/2023"
     nsPrefix="controlabstraction">
-  <eClassifiers xsi:type="ecore:EClass" name="Component" eSuperTypes="#//AbstractNamedElement #//AbstractStatefulEntity"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Agent" eSuperTypes="#//AbstractNamedElement #//AbstractStatefulEntity">
+  <eClassifiers xsi:type="ecore:EClass" name="Component" eSuperTypes="#//AbstractStatefulEntity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Agent" eSuperTypes="#//AbstractActiveEntity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="actions" eType="#//Action"
         containment="true"/>
   </eClassifiers>
@@ -19,7 +19,8 @@
         eType="#//Error" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="State" eSuperTypes="#//AbstractNamedElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="AbstractStatefulEntity" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractStatefulEntity" abstract="true"
+      eSuperTypes="#//AbstractEntity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="states" upperBound="-1"
         eType="#//State" containment="true"/>
   </eClassifiers>
@@ -27,7 +28,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Actor" eSuperTypes="#//Agent">
+  <eClassifiers xsi:type="ecore:EClass" name="Actor" eSuperTypes="#//AbstractActiveEntity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="assumptions" upperBound="-1"
         eType="#//Assumption" containment="true"/>
   </eClassifiers>
@@ -48,4 +49,6 @@
         eType="#//AbstractStatefulEntity" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="purpose" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractEntity" abstract="true" eSuperTypes="#//AbstractNamedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractActiveEntity" eSuperTypes="#//AbstractEntity"/>
 </ecore:EPackage>
