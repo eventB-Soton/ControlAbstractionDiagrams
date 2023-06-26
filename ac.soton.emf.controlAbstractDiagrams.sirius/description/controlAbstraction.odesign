@@ -84,6 +84,17 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateAssumption" label="Assumption" nodeMappings="//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@nodeMappings[name='Assumption%20%20Node']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="controlabstraction::Assumption" referenceName="assumptions">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'A'+container.asssumptions->filter(controlabstraction::Assumption)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
         </toolSections>
       </defaultLayer>
       <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
