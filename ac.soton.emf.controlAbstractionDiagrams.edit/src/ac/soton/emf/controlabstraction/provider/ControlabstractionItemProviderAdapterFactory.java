@@ -213,26 +213,26 @@ public class ControlabstractionItemProviderAdapterFactory extends Controlabstrac
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ac.soton.emf.controlabstraction.ThreatCondition} instances.
+	 * This keeps track of the one adapter used for all {@link ac.soton.emf.controlabstraction.Failure} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ThreatConditionItemProvider threatConditionItemProvider;
+	protected FailureItemProvider failureItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link ac.soton.emf.controlabstraction.ThreatCondition}.
+	 * This creates an adapter for a {@link ac.soton.emf.controlabstraction.Failure}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createThreatConditionAdapter() {
-		if (threatConditionItemProvider == null) {
-			threatConditionItemProvider = new ThreatConditionItemProvider(this);
+	public Adapter createFailureAdapter() {
+		if (failureItemProvider == null) {
+			failureItemProvider = new FailureItemProvider(this);
 		}
 
-		return threatConditionItemProvider;
+		return failureItemProvider;
 	}
 
 	/**
@@ -392,7 +392,7 @@ public class ControlabstractionItemProviderAdapterFactory extends Controlabstrac
 		if (stateItemProvider != null) stateItemProvider.dispose();
 		if (actorItemProvider != null) actorItemProvider.dispose();
 		if (errorItemProvider != null) errorItemProvider.dispose();
-		if (threatConditionItemProvider != null) threatConditionItemProvider.dispose();
+		if (failureItemProvider != null) failureItemProvider.dispose();
 		if (systemItemProvider != null) systemItemProvider.dispose();
 		if (conditionItemProvider != null) conditionItemProvider.dispose();
 	}

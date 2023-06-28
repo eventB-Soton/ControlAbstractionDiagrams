@@ -5,7 +5,7 @@ package ac.soton.emf.controlabstraction.provider;
 
 
 import ac.soton.emf.controlabstraction.ControlabstractionPackage;
-import ac.soton.emf.controlabstraction.ThreatCondition;
+import ac.soton.emf.controlabstraction.Failure;
 
 import java.util.Collection;
 import java.util.List;
@@ -19,19 +19,19 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link ac.soton.emf.controlabstraction.ThreatCondition} object.
+ * This is the item provider adapter for a {@link ac.soton.emf.controlabstraction.Failure} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ThreatConditionItemProvider extends AbstractNamedElementItemProvider {
+public class FailureItemProvider extends AbstractNamedElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ThreatConditionItemProvider(AdapterFactory adapterFactory) {
+	public FailureItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -47,6 +47,7 @@ public class ThreatConditionItemProvider extends AbstractNamedElementItemProvide
 			super.getPropertyDescriptors(object);
 
 			addMitigationPropertyDescriptor(object);
+			addStatesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -62,9 +63,9 @@ public class ThreatConditionItemProvider extends AbstractNamedElementItemProvide
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ThreatCondition_mitigation_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ThreatCondition_mitigation_feature", "_UI_ThreatCondition_type"),
-				 ControlabstractionPackage.Literals.THREAT_CONDITION__MITIGATION,
+				 getString("_UI_Failure_mitigation_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Failure_mitigation_feature", "_UI_Failure_type"),
+				 ControlabstractionPackage.Literals.FAILURE__MITIGATION,
 				 true,
 				 false,
 				 false,
@@ -74,14 +75,36 @@ public class ThreatConditionItemProvider extends AbstractNamedElementItemProvide
 	}
 
 	/**
-	 * This returns ThreatCondition.gif.
+	 * This adds a property descriptor for the States feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addStatesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Failure_states_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Failure_states_feature", "_UI_Failure_type"),
+				 ControlabstractionPackage.Literals.FAILURE__STATES,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This returns Failure.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/ThreatCondition"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Failure"));
 	}
 
 	/**
@@ -92,10 +115,10 @@ public class ThreatConditionItemProvider extends AbstractNamedElementItemProvide
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ThreatCondition)object).getName();
+		String label = ((Failure)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_ThreatCondition_type") :
-			getString("_UI_ThreatCondition_type") + " " + label;
+			getString("_UI_Failure_type") :
+			getString("_UI_Failure_type") + " " + label;
 	}
 
 
@@ -110,8 +133,8 @@ public class ThreatConditionItemProvider extends AbstractNamedElementItemProvide
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(ThreatCondition.class)) {
-			case ControlabstractionPackage.THREAT_CONDITION__MITIGATION:
+		switch (notification.getFeatureID(Failure.class)) {
+			case ControlabstractionPackage.FAILURE__MITIGATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -3,6 +3,8 @@
  */
 package ac.soton.emf.controlabstraction;
 
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -22,25 +24,15 @@ package ac.soton.emf.controlabstraction;
  */
 public interface AbstractActiveEntity extends AbstractEntity {
 	/**
-	 * Returns the value of the '<em><b>Actions</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Actions</b></em>' containment reference list.
+	 * The list contents are of type {@link ac.soton.emf.controlabstraction.Action}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Actions</em>' containment reference.
-	 * @see #setActions(Action)
+	 * @return the value of the '<em>Actions</em>' containment reference list.
 	 * @see ac.soton.emf.controlabstraction.ControlabstractionPackage#getAbstractActiveEntity_Actions()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Action getActions();
-
-	/**
-	 * Sets the value of the '{@link ac.soton.emf.controlabstraction.AbstractActiveEntity#getActions <em>Actions</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Actions</em>' containment reference.
-	 * @see #getActions()
-	 * @generated
-	 */
-	void setActions(Action value);
+	EList<Action> getActions();
 
 } // AbstractActiveEntity

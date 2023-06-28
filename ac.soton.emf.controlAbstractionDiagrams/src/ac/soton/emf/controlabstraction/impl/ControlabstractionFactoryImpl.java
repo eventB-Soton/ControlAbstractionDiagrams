@@ -11,9 +11,8 @@ import ac.soton.emf.controlabstraction.Condition;
 import ac.soton.emf.controlabstraction.ControlabstractionFactory;
 import ac.soton.emf.controlabstraction.ControlabstractionPackage;
 import ac.soton.emf.controlabstraction.ErrorType;
+import ac.soton.emf.controlabstraction.Failure;
 import ac.soton.emf.controlabstraction.State;
-import ac.soton.emf.controlabstraction.ThreatCondition;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
@@ -73,7 +72,7 @@ public class ControlabstractionFactoryImpl extends EFactoryImpl implements Contr
 			case ControlabstractionPackage.STATE: return createState();
 			case ControlabstractionPackage.ACTOR: return createActor();
 			case ControlabstractionPackage.ERROR: return createError();
-			case ControlabstractionPackage.THREAT_CONDITION: return createThreatCondition();
+			case ControlabstractionPackage.FAILURE: return createFailure();
 			case ControlabstractionPackage.SYSTEM: return createSystem();
 			case ControlabstractionPackage.CONDITION: return createCondition();
 			default:
@@ -183,9 +182,9 @@ public class ControlabstractionFactoryImpl extends EFactoryImpl implements Contr
 	 * @generated
 	 */
 	@Override
-	public ThreatCondition createThreatCondition() {
-		ThreatConditionImpl threatCondition = new ThreatConditionImpl();
-		return threatCondition;
+	public Failure createFailure() {
+		FailureImpl failure = new FailureImpl();
+		return failure;
 	}
 
 	/**

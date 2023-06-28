@@ -6,6 +6,7 @@ package ac.soton.emf.controlabstraction.impl;
 import ac.soton.emf.controlabstraction.AbstractEntity;
 import ac.soton.emf.controlabstraction.ControlabstractionPackage;
 
+import ac.soton.emf.controlabstraction.Failure;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -31,6 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link ac.soton.emf.controlabstraction.impl.SystemImpl#getEntities <em>Entities</em>}</li>
  *   <li>{@link ac.soton.emf.controlabstraction.impl.SystemImpl#getPurpose <em>Purpose</em>}</li>
+ *   <li>{@link ac.soton.emf.controlabstraction.impl.SystemImpl#getFailures <em>Failures</em>}</li>
  * </ul>
  *
  * @generated
@@ -65,6 +67,16 @@ public class SystemImpl extends AbstractNamedElementImpl implements ac.soton.emf
 	 * @ordered
 	 */
 	protected String purpose = PURPOSE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getFailures() <em>Failures</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFailures()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Failure> failures;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -127,10 +139,25 @@ public class SystemImpl extends AbstractNamedElementImpl implements ac.soton.emf
 	 * @generated
 	 */
 	@Override
+	public EList<Failure> getFailures() {
+		if (failures == null) {
+			failures = new EObjectContainmentEList<Failure>(Failure.class, this, ControlabstractionPackage.SYSTEM__FAILURES);
+		}
+		return failures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case ControlabstractionPackage.SYSTEM__ENTITIES:
 				return ((InternalEList<?>)getEntities()).basicRemove(otherEnd, msgs);
+			case ControlabstractionPackage.SYSTEM__FAILURES:
+				return ((InternalEList<?>)getFailures()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -147,6 +174,8 @@ public class SystemImpl extends AbstractNamedElementImpl implements ac.soton.emf
 				return getEntities();
 			case ControlabstractionPackage.SYSTEM__PURPOSE:
 				return getPurpose();
+			case ControlabstractionPackage.SYSTEM__FAILURES:
+				return getFailures();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -167,6 +196,10 @@ public class SystemImpl extends AbstractNamedElementImpl implements ac.soton.emf
 			case ControlabstractionPackage.SYSTEM__PURPOSE:
 				setPurpose((String)newValue);
 				return;
+			case ControlabstractionPackage.SYSTEM__FAILURES:
+				getFailures().clear();
+				getFailures().addAll((Collection<? extends Failure>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -185,6 +218,9 @@ public class SystemImpl extends AbstractNamedElementImpl implements ac.soton.emf
 			case ControlabstractionPackage.SYSTEM__PURPOSE:
 				setPurpose(PURPOSE_EDEFAULT);
 				return;
+			case ControlabstractionPackage.SYSTEM__FAILURES:
+				getFailures().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -201,6 +237,8 @@ public class SystemImpl extends AbstractNamedElementImpl implements ac.soton.emf
 				return entities != null && !entities.isEmpty();
 			case ControlabstractionPackage.SYSTEM__PURPOSE:
 				return PURPOSE_EDEFAULT == null ? purpose != null : !PURPOSE_EDEFAULT.equals(purpose);
+			case ControlabstractionPackage.SYSTEM__FAILURES:
+				return failures != null && !failures.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

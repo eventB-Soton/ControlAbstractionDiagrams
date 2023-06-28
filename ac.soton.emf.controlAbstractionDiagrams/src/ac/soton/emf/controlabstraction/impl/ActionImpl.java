@@ -34,7 +34,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link ac.soton.emf.controlabstraction.impl.ActionImpl#getConditions <em>Conditions</em>}</li>
- *   <li>{@link ac.soton.emf.controlabstraction.impl.ActionImpl#getAction <em>Action</em>}</li>
  *   <li>{@link ac.soton.emf.controlabstraction.impl.ActionImpl#getTarget <em>Target</em>}</li>
  *   <li>{@link ac.soton.emf.controlabstraction.impl.ActionImpl#getErrors <em>Errors</em>}</li>
  *   <li>{@link ac.soton.emf.controlabstraction.impl.ActionImpl#getResult <em>Result</em>}</li>
@@ -54,26 +53,6 @@ public class ActionImpl extends AbstractNamedElementImpl implements Action {
 	protected EList<Condition> conditions;
 
 	/**
-	 * The default value of the '{@link #getAction() <em>Action</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAction()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ACTION_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getAction() <em>Action</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAction()
-	 * @generated
-	 * @ordered
-	 */
-	protected String action = ACTION_EDEFAULT;
-
-	/**
 	 * The cached value of the '{@link #getErrors() <em>Errors</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -84,7 +63,7 @@ public class ActionImpl extends AbstractNamedElementImpl implements Action {
 	protected EList<ac.soton.emf.controlabstraction.Error> errors;
 
 	/**
-	 * The cached value of the '{@link #getResult() <em>Result</em>}' containment reference.
+	 * The cached value of the '{@link #getResult() <em>Result</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getResult()
@@ -123,29 +102,6 @@ public class ActionImpl extends AbstractNamedElementImpl implements Action {
 			conditions = new EObjectContainmentEList<Condition>(Condition.class, this, ControlabstractionPackage.ACTION__CONDITIONS);
 		}
 		return conditions;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getAction() {
-		return action;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setAction(String newAction) {
-		String oldAction = action;
-		action = newAction;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ControlabstractionPackage.ACTION__ACTION, oldAction, action));
 	}
 
 	/**
@@ -198,6 +154,14 @@ public class ActionImpl extends AbstractNamedElementImpl implements Action {
 	 */
 	@Override
 	public State getResult() {
+		if (result != null && result.eIsProxy()) {
+			InternalEObject oldResult = (InternalEObject)result;
+			result = (State)eResolveProxy(oldResult);
+			if (result != oldResult) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ControlabstractionPackage.ACTION__RESULT, oldResult, result));
+			}
+		}
 		return result;
 	}
 
@@ -206,14 +170,8 @@ public class ActionImpl extends AbstractNamedElementImpl implements Action {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetResult(State newResult, NotificationChain msgs) {
-		State oldResult = result;
-		result = newResult;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ControlabstractionPackage.ACTION__RESULT, oldResult, newResult);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public State basicGetResult() {
+		return result;
 	}
 
 	/**
@@ -223,17 +181,10 @@ public class ActionImpl extends AbstractNamedElementImpl implements Action {
 	 */
 	@Override
 	public void setResult(State newResult) {
-		if (newResult != result) {
-			NotificationChain msgs = null;
-			if (result != null)
-				msgs = ((InternalEObject)result).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ControlabstractionPackage.ACTION__RESULT, null, msgs);
-			if (newResult != null)
-				msgs = ((InternalEObject)newResult).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ControlabstractionPackage.ACTION__RESULT, null, msgs);
-			msgs = basicSetResult(newResult, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ControlabstractionPackage.ACTION__RESULT, newResult, newResult));
+		State oldResult = result;
+		result = newResult;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ControlabstractionPackage.ACTION__RESULT, oldResult, result));
 	}
 
 	/**
@@ -248,8 +199,6 @@ public class ActionImpl extends AbstractNamedElementImpl implements Action {
 				return ((InternalEList<?>)getConditions()).basicRemove(otherEnd, msgs);
 			case ControlabstractionPackage.ACTION__ERRORS:
 				return ((InternalEList<?>)getErrors()).basicRemove(otherEnd, msgs);
-			case ControlabstractionPackage.ACTION__RESULT:
-				return basicSetResult(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -264,15 +213,14 @@ public class ActionImpl extends AbstractNamedElementImpl implements Action {
 		switch (featureID) {
 			case ControlabstractionPackage.ACTION__CONDITIONS:
 				return getConditions();
-			case ControlabstractionPackage.ACTION__ACTION:
-				return getAction();
 			case ControlabstractionPackage.ACTION__TARGET:
 				if (resolve) return getTarget();
 				return basicGetTarget();
 			case ControlabstractionPackage.ACTION__ERRORS:
 				return getErrors();
 			case ControlabstractionPackage.ACTION__RESULT:
-				return getResult();
+				if (resolve) return getResult();
+				return basicGetResult();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -289,9 +237,6 @@ public class ActionImpl extends AbstractNamedElementImpl implements Action {
 			case ControlabstractionPackage.ACTION__CONDITIONS:
 				getConditions().clear();
 				getConditions().addAll((Collection<? extends Condition>)newValue);
-				return;
-			case ControlabstractionPackage.ACTION__ACTION:
-				setAction((String)newValue);
 				return;
 			case ControlabstractionPackage.ACTION__ERRORS:
 				getErrors().clear();
@@ -315,9 +260,6 @@ public class ActionImpl extends AbstractNamedElementImpl implements Action {
 			case ControlabstractionPackage.ACTION__CONDITIONS:
 				getConditions().clear();
 				return;
-			case ControlabstractionPackage.ACTION__ACTION:
-				setAction(ACTION_EDEFAULT);
-				return;
 			case ControlabstractionPackage.ACTION__ERRORS:
 				getErrors().clear();
 				return;
@@ -338,8 +280,6 @@ public class ActionImpl extends AbstractNamedElementImpl implements Action {
 		switch (featureID) {
 			case ControlabstractionPackage.ACTION__CONDITIONS:
 				return conditions != null && !conditions.isEmpty();
-			case ControlabstractionPackage.ACTION__ACTION:
-				return ACTION_EDEFAULT == null ? action != null : !ACTION_EDEFAULT.equals(action);
 			case ControlabstractionPackage.ACTION__TARGET:
 				return basicGetTarget() != null;
 			case ControlabstractionPackage.ACTION__ERRORS:
@@ -348,22 +288,6 @@ public class ActionImpl extends AbstractNamedElementImpl implements Action {
 				return result != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (action: ");
-		result.append(action);
-		result.append(')');
-		return result.toString();
 	}
 
 } //ActionImpl

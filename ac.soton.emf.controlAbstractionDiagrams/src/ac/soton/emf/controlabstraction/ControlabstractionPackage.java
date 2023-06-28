@@ -289,7 +289,7 @@ public interface ControlabstractionPackage extends EPackage {
 	int ABSTRACT_ACTIVE_ENTITY__DESCRIPTION = ABSTRACT_ENTITY__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Actions</b></em>' containment reference.
+	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -344,7 +344,7 @@ public interface ControlabstractionPackage extends EPackage {
 	int AGENT__DESCRIPTION = ABSTRACT_ACTIVE_ENTITY__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Actions</b></em>' containment reference.
+	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -408,22 +408,13 @@ public interface ControlabstractionPackage extends EPackage {
 	int ACTION__CONDITIONS = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Action</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTION__ACTION = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__TARGET = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int ACTION__TARGET = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Errors</b></em>' containment reference list.
@@ -432,16 +423,16 @@ public interface ControlabstractionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__ERRORS = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 3;
+	int ACTION__ERRORS = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Result</b></em>' containment reference.
+	 * The feature id for the '<em><b>Result</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__RESULT = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 4;
+	int ACTION__RESULT = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Action</em>' class.
@@ -450,7 +441,7 @@ public interface ControlabstractionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION_FEATURE_COUNT = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 5;
+	int ACTION_FEATURE_COUNT = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Action</em>' class.
@@ -536,7 +527,7 @@ public interface ControlabstractionPackage extends EPackage {
 	int ACTOR__DESCRIPTION = ABSTRACT_ACTIVE_ENTITY__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Actions</b></em>' containment reference.
+	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -627,14 +618,14 @@ public interface ControlabstractionPackage extends EPackage {
 	int ERROR_OPERATION_COUNT = ABSTRACT_NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link ac.soton.emf.controlabstraction.impl.ThreatConditionImpl <em>Threat Condition</em>}' class.
+	 * The meta object id for the '{@link ac.soton.emf.controlabstraction.impl.FailureImpl <em>Failure</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see ac.soton.emf.controlabstraction.impl.ThreatConditionImpl
-	 * @see ac.soton.emf.controlabstraction.impl.ControlabstractionPackageImpl#getThreatCondition()
+	 * @see ac.soton.emf.controlabstraction.impl.FailureImpl
+	 * @see ac.soton.emf.controlabstraction.impl.ControlabstractionPackageImpl#getFailure()
 	 * @generated
 	 */
-	int THREAT_CONDITION = 8;
+	int FAILURE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -643,7 +634,7 @@ public interface ControlabstractionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int THREAT_CONDITION__NAME = ABSTRACT_NAMED_ELEMENT__NAME;
+	int FAILURE__NAME = ABSTRACT_NAMED_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -652,7 +643,7 @@ public interface ControlabstractionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int THREAT_CONDITION__DESCRIPTION = ABSTRACT_NAMED_ELEMENT__DESCRIPTION;
+	int FAILURE__DESCRIPTION = ABSTRACT_NAMED_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Mitigation</b></em>' attribute.
@@ -661,25 +652,34 @@ public interface ControlabstractionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int THREAT_CONDITION__MITIGATION = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 0;
+	int FAILURE__MITIGATION = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Threat Condition</em>' class.
+	 * The feature id for the '<em><b>States</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int THREAT_CONDITION_FEATURE_COUNT = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int FAILURE__STATES = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Threat Condition</em>' class.
+	 * The number of structural features of the '<em>Failure</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int THREAT_CONDITION_OPERATION_COUNT = ABSTRACT_NAMED_ELEMENT_OPERATION_COUNT + 0;
+	int FAILURE_FEATURE_COUNT = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Failure</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FAILURE_OPERATION_COUNT = ABSTRACT_NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link ac.soton.emf.controlabstraction.impl.SystemImpl <em>System</em>}' class.
@@ -728,13 +728,22 @@ public interface ControlabstractionPackage extends EPackage {
 	int SYSTEM__PURPOSE = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Failures</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM__FAILURES = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>System</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_FEATURE_COUNT = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int SYSTEM_FEATURE_COUNT = ABSTRACT_NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>System</em>' class.
@@ -862,17 +871,6 @@ public interface ControlabstractionPackage extends EPackage {
 	EReference getAction_Conditions();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ac.soton.emf.controlabstraction.Action#getAction <em>Action</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Action</em>'.
-	 * @see ac.soton.emf.controlabstraction.Action#getAction()
-	 * @see #getAction()
-	 * @generated
-	 */
-	EAttribute getAction_Action();
-
-	/**
 	 * Returns the meta object for the reference '{@link ac.soton.emf.controlabstraction.Action#getTarget <em>Target</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -895,10 +893,10 @@ public interface ControlabstractionPackage extends EPackage {
 	EReference getAction_Errors();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link ac.soton.emf.controlabstraction.Action#getResult <em>Result</em>}'.
+	 * Returns the meta object for the reference '{@link ac.soton.emf.controlabstraction.Action#getResult <em>Result</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Result</em>'.
+	 * @return the meta object for the reference '<em>Result</em>'.
 	 * @see ac.soton.emf.controlabstraction.Action#getResult()
 	 * @see #getAction()
 	 * @generated
@@ -1011,25 +1009,36 @@ public interface ControlabstractionPackage extends EPackage {
 	EReference getError_Failure();
 
 	/**
-	 * Returns the meta object for class '{@link ac.soton.emf.controlabstraction.ThreatCondition <em>Threat Condition</em>}'.
+	 * Returns the meta object for class '{@link ac.soton.emf.controlabstraction.Failure <em>Failure</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Threat Condition</em>'.
-	 * @see ac.soton.emf.controlabstraction.ThreatCondition
+	 * @return the meta object for class '<em>Failure</em>'.
+	 * @see ac.soton.emf.controlabstraction.Failure
 	 * @generated
 	 */
-	EClass getThreatCondition();
+	EClass getFailure();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ac.soton.emf.controlabstraction.ThreatCondition#getMitigation <em>Mitigation</em>}'.
+	 * Returns the meta object for the attribute '{@link ac.soton.emf.controlabstraction.Failure#getMitigation <em>Mitigation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Mitigation</em>'.
-	 * @see ac.soton.emf.controlabstraction.ThreatCondition#getMitigation()
-	 * @see #getThreatCondition()
+	 * @see ac.soton.emf.controlabstraction.Failure#getMitigation()
+	 * @see #getFailure()
 	 * @generated
 	 */
-	EAttribute getThreatCondition_Mitigation();
+	EAttribute getFailure_Mitigation();
+
+	/**
+	 * Returns the meta object for the reference list '{@link ac.soton.emf.controlabstraction.Failure#getStates <em>States</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>States</em>'.
+	 * @see ac.soton.emf.controlabstraction.Failure#getStates()
+	 * @see #getFailure()
+	 * @generated
+	 */
+	EReference getFailure_States();
 
 	/**
 	 * Returns the meta object for class '{@link ac.soton.emf.controlabstraction.System <em>System</em>}'.
@@ -1064,6 +1073,17 @@ public interface ControlabstractionPackage extends EPackage {
 	EAttribute getSystem_Purpose();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link ac.soton.emf.controlabstraction.System#getFailures <em>Failures</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Failures</em>'.
+	 * @see ac.soton.emf.controlabstraction.System#getFailures()
+	 * @see #getSystem()
+	 * @generated
+	 */
+	EReference getSystem_Failures();
+
+	/**
 	 * Returns the meta object for class '{@link ac.soton.emf.controlabstraction.AbstractEntity <em>Abstract Entity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1084,10 +1104,10 @@ public interface ControlabstractionPackage extends EPackage {
 	EClass getAbstractActiveEntity();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link ac.soton.emf.controlabstraction.AbstractActiveEntity#getActions <em>Actions</em>}'.
+	 * Returns the meta object for the containment reference list '{@link ac.soton.emf.controlabstraction.AbstractActiveEntity#getActions <em>Actions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Actions</em>'.
+	 * @return the meta object for the containment reference list '<em>Actions</em>'.
 	 * @see ac.soton.emf.controlabstraction.AbstractActiveEntity#getActions()
 	 * @see #getAbstractActiveEntity()
 	 * @generated
@@ -1198,14 +1218,6 @@ public interface ControlabstractionPackage extends EPackage {
 		EReference ACTION__CONDITIONS = eINSTANCE.getAction_Conditions();
 
 		/**
-		 * The meta object literal for the '<em><b>Action</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ACTION__ACTION = eINSTANCE.getAction_Action();
-
-		/**
 		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1222,7 +1234,7 @@ public interface ControlabstractionPackage extends EPackage {
 		EReference ACTION__ERRORS = eINSTANCE.getAction_Errors();
 
 		/**
-		 * The meta object literal for the '<em><b>Result</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Result</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1320,14 +1332,14 @@ public interface ControlabstractionPackage extends EPackage {
 		EReference ERROR__FAILURE = eINSTANCE.getError_Failure();
 
 		/**
-		 * The meta object literal for the '{@link ac.soton.emf.controlabstraction.impl.ThreatConditionImpl <em>Threat Condition</em>}' class.
+		 * The meta object literal for the '{@link ac.soton.emf.controlabstraction.impl.FailureImpl <em>Failure</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see ac.soton.emf.controlabstraction.impl.ThreatConditionImpl
-		 * @see ac.soton.emf.controlabstraction.impl.ControlabstractionPackageImpl#getThreatCondition()
+		 * @see ac.soton.emf.controlabstraction.impl.FailureImpl
+		 * @see ac.soton.emf.controlabstraction.impl.ControlabstractionPackageImpl#getFailure()
 		 * @generated
 		 */
-		EClass THREAT_CONDITION = eINSTANCE.getThreatCondition();
+		EClass FAILURE = eINSTANCE.getFailure();
 
 		/**
 		 * The meta object literal for the '<em><b>Mitigation</b></em>' attribute feature.
@@ -1335,7 +1347,15 @@ public interface ControlabstractionPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute THREAT_CONDITION__MITIGATION = eINSTANCE.getThreatCondition_Mitigation();
+		EAttribute FAILURE__MITIGATION = eINSTANCE.getFailure_Mitigation();
+
+		/**
+		 * The meta object literal for the '<em><b>States</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FAILURE__STATES = eINSTANCE.getFailure_States();
 
 		/**
 		 * The meta object literal for the '{@link ac.soton.emf.controlabstraction.impl.SystemImpl <em>System</em>}' class.
@@ -1364,6 +1384,14 @@ public interface ControlabstractionPackage extends EPackage {
 		EAttribute SYSTEM__PURPOSE = eINSTANCE.getSystem_Purpose();
 
 		/**
+		 * The meta object literal for the '<em><b>Failures</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SYSTEM__FAILURES = eINSTANCE.getSystem_Failures();
+
+		/**
 		 * The meta object literal for the '{@link ac.soton.emf.controlabstraction.impl.AbstractEntityImpl <em>Abstract Entity</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1384,7 +1412,7 @@ public interface ControlabstractionPackage extends EPackage {
 		EClass ABSTRACT_ACTIVE_ENTITY = eINSTANCE.getAbstractActiveEntity();
 
 		/**
-		 * The meta object literal for the '<em><b>Actions</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Actions</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

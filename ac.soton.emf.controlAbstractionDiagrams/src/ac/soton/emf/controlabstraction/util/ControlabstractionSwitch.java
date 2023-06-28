@@ -13,9 +13,8 @@ import ac.soton.emf.controlabstraction.Agent;
 import ac.soton.emf.controlabstraction.Component;
 import ac.soton.emf.controlabstraction.Condition;
 import ac.soton.emf.controlabstraction.ControlabstractionPackage;
+import ac.soton.emf.controlabstraction.Failure;
 import ac.soton.emf.controlabstraction.State;
-import ac.soton.emf.controlabstraction.ThreatCondition;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -140,11 +139,10 @@ public class ControlabstractionSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ControlabstractionPackage.THREAT_CONDITION: {
-				ThreatCondition threatCondition = (ThreatCondition)theEObject;
-				T result = caseThreatCondition(threatCondition);
-				if (result == null) result = caseState(threatCondition);
-				if (result == null) result = caseAbstractNamedElement(threatCondition);
+			case ControlabstractionPackage.FAILURE: {
+				Failure failure = (Failure)theEObject;
+				T result = caseFailure(failure);
+				if (result == null) result = caseAbstractNamedElement(failure);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -302,17 +300,17 @@ public class ControlabstractionSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Threat Condition</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Failure</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Threat Condition</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Failure</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseThreatCondition(ThreatCondition object) {
+	public T caseFailure(Failure object) {
 		return null;
 	}
 

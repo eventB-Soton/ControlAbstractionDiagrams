@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -50,7 +49,6 @@ public class ActionItemProvider extends AbstractNamedElementItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addConditionsPropertyDescriptor(object);
-			addActionPropertyDescriptor(object);
 			addTargetPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -74,28 +72,6 @@ public class ActionItemProvider extends AbstractNamedElementItemProvider {
 				 false,
 				 true,
 				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Action feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addActionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Action_action_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Action_action_feature", "_UI_Action_type"),
-				 ControlabstractionPackage.Literals.ACTION__ACTION,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -192,9 +168,6 @@ public class ActionItemProvider extends AbstractNamedElementItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Action.class)) {
-			case ControlabstractionPackage.ACTION__ACTION:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
 			case ControlabstractionPackage.ACTION__CONDITIONS:
 			case ControlabstractionPackage.ACTION__ERRORS:
 			case ControlabstractionPackage.ACTION__RESULT:
@@ -229,11 +202,6 @@ public class ActionItemProvider extends AbstractNamedElementItemProvider {
 			(createChildParameter
 				(ControlabstractionPackage.Literals.ACTION__RESULT,
 				 ControlabstractionFactory.eINSTANCE.createState()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ControlabstractionPackage.Literals.ACTION__RESULT,
-				 ControlabstractionFactory.eINSTANCE.createThreatCondition()));
 	}
 
 }

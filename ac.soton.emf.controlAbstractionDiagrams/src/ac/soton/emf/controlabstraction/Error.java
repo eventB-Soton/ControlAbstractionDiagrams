@@ -52,12 +52,12 @@ public interface Error extends AbstractNamedElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Failure</em>' reference.
-	 * @see #setFailure(ThreatCondition)
+	 * @see #setFailure(Failure)
 	 * @see ac.soton.emf.controlabstraction.ControlabstractionPackage#getError_Failure()
 	 * @model
 	 * @generated
 	 */
-	ThreatCondition getFailure();
+	Failure getFailure();
 
 	/**
 	 * Sets the value of the '{@link ac.soton.emf.controlabstraction.Error#getFailure <em>Failure</em>}' reference.
@@ -67,6 +67,6 @@ public interface Error extends AbstractNamedElement {
 	 * @see #getFailure()
 	 * @generated
 	 */
-	void setFailure(ThreatCondition value);
+	void setFailure(Failure value);
 
 } // Error

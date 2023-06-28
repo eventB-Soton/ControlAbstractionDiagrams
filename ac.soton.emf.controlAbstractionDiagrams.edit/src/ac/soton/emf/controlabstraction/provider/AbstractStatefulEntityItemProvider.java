@@ -141,11 +141,6 @@ public class AbstractStatefulEntityItemProvider extends AbstractEntityItemProvid
 			(createChildParameter
 				(ControlabstractionPackage.Literals.ABSTRACT_STATEFUL_ENTITY__STATES,
 				 ControlabstractionFactory.eINSTANCE.createState()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ControlabstractionPackage.Literals.ABSTRACT_STATEFUL_ENTITY__STATES,
-				 ControlabstractionFactory.eINSTANCE.createThreatCondition()));
 	}
 
 }

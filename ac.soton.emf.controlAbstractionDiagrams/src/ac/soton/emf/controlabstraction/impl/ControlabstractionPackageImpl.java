@@ -15,9 +15,8 @@ import ac.soton.emf.controlabstraction.Condition;
 import ac.soton.emf.controlabstraction.ControlabstractionFactory;
 import ac.soton.emf.controlabstraction.ControlabstractionPackage;
 import ac.soton.emf.controlabstraction.ErrorType;
+import ac.soton.emf.controlabstraction.Failure;
 import ac.soton.emf.controlabstraction.State;
-import ac.soton.emf.controlabstraction.ThreatCondition;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -96,7 +95,7 @@ public class ControlabstractionPackageImpl extends EPackageImpl implements Contr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass threatConditionEClass = null;
+	private EClass failureEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -242,18 +241,8 @@ public class ControlabstractionPackageImpl extends EPackageImpl implements Contr
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAction_Action() {
-		return (EAttribute)actionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getAction_Target() {
-		return (EReference)actionEClass.getEStructuralFeatures().get(2);
+		return (EReference)actionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -263,7 +252,7 @@ public class ControlabstractionPackageImpl extends EPackageImpl implements Contr
 	 */
 	@Override
 	public EReference getAction_Errors() {
-		return (EReference)actionEClass.getEStructuralFeatures().get(3);
+		return (EReference)actionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -273,7 +262,7 @@ public class ControlabstractionPackageImpl extends EPackageImpl implements Contr
 	 */
 	@Override
 	public EReference getAction_Result() {
-		return (EReference)actionEClass.getEStructuralFeatures().get(4);
+		return (EReference)actionEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -382,8 +371,8 @@ public class ControlabstractionPackageImpl extends EPackageImpl implements Contr
 	 * @generated
 	 */
 	@Override
-	public EClass getThreatCondition() {
-		return threatConditionEClass;
+	public EClass getFailure() {
+		return failureEClass;
 	}
 
 	/**
@@ -392,8 +381,18 @@ public class ControlabstractionPackageImpl extends EPackageImpl implements Contr
 	 * @generated
 	 */
 	@Override
-	public EAttribute getThreatCondition_Mitigation() {
-		return (EAttribute)threatConditionEClass.getEStructuralFeatures().get(0);
+	public EAttribute getFailure_Mitigation() {
+		return (EAttribute)failureEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getFailure_States() {
+		return (EReference)failureEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -424,6 +423,16 @@ public class ControlabstractionPackageImpl extends EPackageImpl implements Contr
 	@Override
 	public EAttribute getSystem_Purpose() {
 		return (EAttribute)systemEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSystem_Failures() {
+		return (EReference)systemEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -531,7 +540,6 @@ public class ControlabstractionPackageImpl extends EPackageImpl implements Contr
 
 		actionEClass = createEClass(ACTION);
 		createEReference(actionEClass, ACTION__CONDITIONS);
-		createEAttribute(actionEClass, ACTION__ACTION);
 		createEReference(actionEClass, ACTION__TARGET);
 		createEReference(actionEClass, ACTION__ERRORS);
 		createEReference(actionEClass, ACTION__RESULT);
@@ -551,12 +559,14 @@ public class ControlabstractionPackageImpl extends EPackageImpl implements Contr
 		createEAttribute(errorEClass, ERROR__TYPE);
 		createEReference(errorEClass, ERROR__FAILURE);
 
-		threatConditionEClass = createEClass(THREAT_CONDITION);
-		createEAttribute(threatConditionEClass, THREAT_CONDITION__MITIGATION);
+		failureEClass = createEClass(FAILURE);
+		createEAttribute(failureEClass, FAILURE__MITIGATION);
+		createEReference(failureEClass, FAILURE__STATES);
 
 		systemEClass = createEClass(SYSTEM);
 		createEReference(systemEClass, SYSTEM__ENTITIES);
 		createEAttribute(systemEClass, SYSTEM__PURPOSE);
+		createEReference(systemEClass, SYSTEM__FAILURES);
 
 		abstractEntityEClass = createEClass(ABSTRACT_ENTITY);
 
@@ -609,8 +619,7 @@ public class ControlabstractionPackageImpl extends EPackageImpl implements Contr
 		abstractStatefulEntityEClass.getESuperTypes().add(this.getAbstractEntity());
 		actorEClass.getESuperTypes().add(this.getAbstractActiveEntity());
 		errorEClass.getESuperTypes().add(this.getAbstractNamedElement());
-		threatConditionEClass.getESuperTypes().add(this.getAbstractNamedElement());
-		threatConditionEClass.getESuperTypes().add(this.getState());
+		failureEClass.getESuperTypes().add(this.getAbstractNamedElement());
 		systemEClass.getESuperTypes().add(this.getAbstractNamedElement());
 		abstractEntityEClass.getESuperTypes().add(this.getAbstractNamedElement());
 		abstractActiveEntityEClass.getESuperTypes().add(this.getAbstractEntity());
@@ -623,10 +632,9 @@ public class ControlabstractionPackageImpl extends EPackageImpl implements Contr
 
 		initEClass(actionEClass, Action.class, "Action", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAction_Conditions(), this.getCondition(), null, "conditions", null, 0, -1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAction_Action(), ecorePackage.getEString(), "action", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAction_Target(), this.getComponent(), null, "target", null, 0, 1, Action.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getAction_Errors(), this.getError(), null, "errors", null, 0, -1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAction_Result(), this.getState(), null, "result", null, 1, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAction_Result(), this.getState(), null, "result", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(stateEClass, State.class, "State", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -641,19 +649,21 @@ public class ControlabstractionPackageImpl extends EPackageImpl implements Contr
 
 		initEClass(errorEClass, ac.soton.emf.controlabstraction.Error.class, "Error", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getError_Type(), this.getErrorType(), "type", null, 0, 1, ac.soton.emf.controlabstraction.Error.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getError_Failure(), this.getThreatCondition(), null, "failure", null, 0, 1, ac.soton.emf.controlabstraction.Error.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getError_Failure(), this.getFailure(), null, "failure", null, 0, 1, ac.soton.emf.controlabstraction.Error.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(threatConditionEClass, ThreatCondition.class, "ThreatCondition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getThreatCondition_Mitigation(), ecorePackage.getEString(), "mitigation", null, 0, 1, ThreatCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(failureEClass, Failure.class, "Failure", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFailure_Mitigation(), ecorePackage.getEString(), "mitigation", null, 0, 1, Failure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFailure_States(), this.getState(), null, "states", null, 0, -1, Failure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(systemEClass, ac.soton.emf.controlabstraction.System.class, "System", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSystem_Entities(), this.getAbstractEntity(), null, "entities", null, 0, -1, ac.soton.emf.controlabstraction.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSystem_Purpose(), ecorePackage.getEString(), "purpose", null, 0, 1, ac.soton.emf.controlabstraction.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSystem_Failures(), this.getFailure(), null, "failures", null, 0, -1, ac.soton.emf.controlabstraction.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(abstractEntityEClass, AbstractEntity.class, "AbstractEntity", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(abstractActiveEntityEClass, AbstractActiveEntity.class, "AbstractActiveEntity", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAbstractActiveEntity_Actions(), this.getAction(), null, "actions", null, 0, 1, AbstractActiveEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractActiveEntity_Actions(), this.getAction(), null, "actions", null, 0, -1, AbstractActiveEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(conditionEClass, Condition.class, "Condition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCondition_State(), this.getState(), null, "state", null, 0, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

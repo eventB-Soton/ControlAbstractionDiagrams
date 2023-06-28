@@ -4,17 +4,17 @@
 package ac.soton.emf.controlabstraction.tests;
 
 import ac.soton.emf.controlabstraction.ControlabstractionFactory;
-import ac.soton.emf.controlabstraction.ThreatCondition;
+import ac.soton.emf.controlabstraction.Failure;
 
 import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>Threat Condition</b></em>'.
+ * A test case for the model object '<em><b>Failure</b></em>'.
  * <!-- end-user-doc -->
  * @generated
  */
-public class ThreatConditionTest extends AbstractNamedElementTest {
+public class FailureTest extends AbstractNamedElementTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -22,28 +22,28 @@ public class ThreatConditionTest extends AbstractNamedElementTest {
 	 * @generated
 	 */
 	public static void main(String[] args) {
-		TestRunner.run(ThreatConditionTest.class);
+		TestRunner.run(FailureTest.class);
 	}
 
 	/**
-	 * Constructs a new Threat Condition test case with the given name.
+	 * Constructs a new Failure test case with the given name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ThreatConditionTest(String name) {
+	public FailureTest(String name) {
 		super(name);
 	}
 
 	/**
-	 * Returns the fixture for this Threat Condition test case.
+	 * Returns the fixture for this Failure test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	protected ThreatCondition getFixture() {
-		return (ThreatCondition)fixture;
+	protected Failure getFixture() {
+		return (Failure)fixture;
 	}
 
 	/**
@@ -54,7 +54,7 @@ public class ThreatConditionTest extends AbstractNamedElementTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(ControlabstractionFactory.eINSTANCE.createThreatCondition());
+		setFixture(ControlabstractionFactory.eINSTANCE.createFailure());
 	}
 
 	/**
@@ -68,4 +68,4 @@ public class ThreatConditionTest extends AbstractNamedElementTest {
 		setFixture(null);
 	}
 
-} //ThreatConditionTest
+} //FailureTest
