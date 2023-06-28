@@ -3,25 +3,25 @@
  */
 package ac.soton.emf.controlabstraction.impl;
 
-import ac.soton.emf.controlabstraction.Assumption;
+import ac.soton.emf.controlabstraction.AbstractEntity;
 import ac.soton.emf.controlabstraction.ControlabstractionPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Assumption</b></em>'.
+ * An implementation of the model object '<em><b>Abstract Entity</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class AssumptionImpl extends AbstractNamedElementImpl implements Assumption {
+public abstract class AbstractEntityImpl extends AbstractNamedElementImpl implements AbstractEntity {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AssumptionImpl() {
+	protected AbstractEntityImpl() {
 		super();
 	}
 
@@ -32,7 +32,7 @@ public class AssumptionImpl extends AbstractNamedElementImpl implements Assumpti
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ControlabstractionPackage.Literals.ASSUMPTION;
+		return ControlabstractionPackage.Literals.ABSTRACT_ENTITY;
 	}
 
-} //AssumptionImpl
+} //AbstractEntityImpl

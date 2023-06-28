@@ -4,8 +4,9 @@
 package ac.soton.emf.controlabstraction.provider;
 
 
+import ac.soton.emf.controlabstraction.AbstractActiveEntity;
+import ac.soton.emf.controlabstraction.ControlabstractionFactory;
 import ac.soton.emf.controlabstraction.ControlabstractionPackage;
-import ac.soton.emf.controlabstraction.ThreatCondition;
 
 import java.util.Collection;
 import java.util.List;
@@ -13,25 +14,25 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
+import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link ac.soton.emf.controlabstraction.ThreatCondition} object.
+ * This is the item provider adapter for a {@link ac.soton.emf.controlabstraction.AbstractActiveEntity} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ThreatConditionItemProvider extends AbstractNamedElementItemProvider {
+public class AbstractActiveEntityItemProvider extends AbstractEntityItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ThreatConditionItemProvider(AdapterFactory adapterFactory) {
+	public AbstractActiveEntityItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -46,42 +47,49 @@ public class ThreatConditionItemProvider extends AbstractNamedElementItemProvide
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addMitigationPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Mitigation feature.
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addMitigationPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ThreatCondition_mitigation_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ThreatCondition_mitigation_feature", "_UI_ThreatCondition_type"),
-				 ControlabstractionPackage.Literals.THREAT_CONDITION__MITIGATION,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(ControlabstractionPackage.Literals.ABSTRACT_ACTIVE_ENTITY__ACTIONS);
+		}
+		return childrenFeatures;
 	}
 
 	/**
-	 * This returns ThreatCondition.gif.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child) {
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
+	}
+
+	/**
+	 * This returns AbstractActiveEntity.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/ThreatCondition"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/AbstractActiveEntity"));
 	}
 
 	/**
@@ -92,10 +100,10 @@ public class ThreatConditionItemProvider extends AbstractNamedElementItemProvide
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ThreatCondition)object).getName();
+		String label = ((AbstractActiveEntity)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_ThreatCondition_type") :
-			getString("_UI_ThreatCondition_type") + " " + label;
+			getString("_UI_AbstractActiveEntity_type") :
+			getString("_UI_AbstractActiveEntity_type") + " " + label;
 	}
 
 
@@ -110,9 +118,9 @@ public class ThreatConditionItemProvider extends AbstractNamedElementItemProvide
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(ThreatCondition.class)) {
-			case ControlabstractionPackage.THREAT_CONDITION__MITIGATION:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+		switch (notification.getFeatureID(AbstractActiveEntity.class)) {
+			case ControlabstractionPackage.ABSTRACT_ACTIVE_ENTITY__ACTIONS:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
 		super.notifyChanged(notification);
@@ -128,6 +136,11 @@ public class ThreatConditionItemProvider extends AbstractNamedElementItemProvide
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ControlabstractionPackage.Literals.ABSTRACT_ACTIVE_ENTITY__ACTIONS,
+				 ControlabstractionFactory.eINSTANCE.createAction()));
 	}
 
 }

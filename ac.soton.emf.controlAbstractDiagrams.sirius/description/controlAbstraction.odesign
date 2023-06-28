@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/tree/description/1.0.0" xmlns:description_3="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="controlAbstraction" version="12.0.0.2017041100">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/tree/description/1.0.0" xmlns:description_3="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="controlAbstraction" version="12.0.0.2017041100">
   <ownedViewpoints name="cabsViewPoint" label="Control Abstraction Diagrams ViewPoint" modelFileExtension="cabs">
     <ownedRepresentations xsi:type="description_1:EditionTableDescription"/>
     <ownedRepresentations xsi:type="description_2:TreeDescription"/>
     <ownedRepresentations xsi:type="description_3:DiagramDescription" name="cabsDiagram" domainClass="controlabstraction::System" enablePopupBars="true">
       <metamodel href="http://soton.ac.uk/models/eventb/controlabstraction/2023#/"/>
       <defaultLayer name="Default">
-        <nodeMappings name="ComponentNode" label="Component Node" semanticCandidatesExpression="feature:entities" domainClass="controlabstraction::Component">
-          <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW" width="20" height="10">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-          </style>
-        </nodeMappings>
-        <nodeMappings name="AgentNode" label="Agent Node" semanticCandidatesExpression="aql: self.entities -> reject(x | x.oclIsKindOf(controlabstraction::Actor))" domainClass="controlabstraction::Agent">
+        <nodeMappings name="AgentNode" label="Agent Node" semanticCandidatesExpression="feature:entities" domainClass="controlabstraction::Agent">
           <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="10" verticalDiameterComputationExpression="6">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -24,25 +17,39 @@
           <style xsi:type="style:EllipseNodeDescription" labelSize="12" tooltipExpression="Create an Actor in the system" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="10" verticalDiameterComputationExpression="6">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="Assumption  Node" label="Assumption Node" semanticCandidatesExpression="feature:eAllContents" domainClass="controlabstraction::Assumption">
-          <style xsi:type="style:WorkspaceImageDescription" labelSize="10" showIcon="false" labelExpression="aql:self.name+': '+self.description" tooltipExpression="an asssumption about the behaviour of  an actorr" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/ac.soton.emf.controlAbstractDiagrams.sirius/images/assumption.svg">
+        <nodeMappings name="ConditionNode" label="Condition Node" semanticCandidatesExpression="aql:self.eAllContents(controlabstraction::Condition) -> select( p | p.assumption == false)" domainClass="controlabstraction::Condition">
+          <style xsi:type="style:EllipseNodeDescription" labelSize="12" showIcon="false" labelExpression="aql:self.name+': ['+self.state.name+']'" resizeKind="NSEW" horizontalDiameterComputationExpression="1" verticalDiameterComputationExpression="1">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="AssumptionNode" label="Assumption Node" semanticCandidatesExpression="aql:self.eAllContents(controlabstraction::Condition) -> select( p | p.assumption == true)" domainClass="controlabstraction::Condition">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="10" showIcon="false" labelExpression="aql:self.name+': ['+self.state.name+']\n'+self.description" tooltipExpression="an asssumption about the behaviour of an actor" sizeComputationExpression="20" labelPosition="node" resizeKind="NSEW" workspacePath="/ac.soton.emf.controlAbstractDiagrams.sirius/images/assumption.svg">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
             <labelFormat>italic</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
-        <edgeMappings name="ActionEdge" label="Action" sourceMapping="//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@nodeMappings[name='AgentNode']" targetMapping="//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@nodeMappings[name='ComponentNode']" targetFinderExpression="target" sourceFinderExpression="[eContainer()]" domainClass="Action" useDomainElement="true">
-          <style sizeComputationExpression="2">
+        <nodeMappings name="FailureNode" label="Failure Node" semanticCandidatesExpression="feature:failures" domainClass="Failure">
+          <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql:'FAILURE CONDITION\n'+self.name+': '+self.states.name->sep('(', ' AND ', ')')" labelPosition="node" resizeKind="NSEW" width="20" height="5">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="ActionEdge" label="Action Edge" sourceMapping="//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@nodeMappings[name='AgentNode'] //@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@nodeMappings[name='ActorNode']" targetMapping="//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@containerMappings[name='ComponentContainer']" targetFinderExpression="feature:target" sourceFinderExpression="aql:self.eContainer()" domainClass="Action" useDomainElement="true">
+          <style targetArrow="InputFillClosedArrow" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription labelSize="12" labelExpression="name">
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="aql:self.name+' -> '+self.result.name">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="conditionEdge" sourceMapping="//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@nodeMappings[name='ComponentNode']" targetMapping="//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@edgeMappings[name='ActionEdge']">
+        <edgeMappings name="ConditionEdge" label="Condition Edge" targetMapping="//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@edgeMappings[name='ActionEdge']">
           <style lineStyle="dash" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
@@ -50,8 +57,38 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <toolSections>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateComponent" label="Component" nodeMappings="//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@nodeMappings[name='ComponentNode']">
+        <edgeMappings name="AssumptionTargetEdge" label="Assumption Target Edge" sourceMapping="//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@nodeMappings[name='AssumptionNode'] //@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@nodeMappings[name='ConditionNode']" targetMapping="//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@edgeMappings[name='ActionEdge']" targetFinderExpression="feature:eContainer">
+          <style lineStyle="dash" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ConditionStateEdge" label="Condition State Edge" sourceMapping="//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@nodeMappings[name='AssumptionNode'] //@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@nodeMappings[name='ConditionNode']" targetMapping="//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@containerMappings[name='ComponentContainer']" targetFinderExpression="aql:self.state.eContainer()">
+          <style lineStyle="dot" targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="ComponentContainer" label="Component Container" semanticCandidatesExpression="feature:entities" domainClass="controlabstraction::Component" childrenPresentation="List">
+          <subNodeMappings name="StateNode" label="State Node" semanticCandidatesExpression="feature:states" domainClass="controlabstraction::State">
+            <style xsi:type="style:CustomStyleDescription" labelSize="12" showIcon="false" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" backgroundStyle="GradientTopToBottom">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="NodeCreationTools" label="Create Node">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateComponent" label="Component">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -80,6 +117,64 @@
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="controlabstraction::Actor" referenceName="entities">
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Actor'+container.entities->filter(controlabstraction::Actor)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateCondition" label="Condition" precondition="aql:container.oclIsKindOf(controlabstraction::Action)" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@nodeMappings[name='ConditionNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="controlabstraction::Condition" referenceName="guards"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateFailure" label="Failure" nodeMappings="//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@nodeMappings[name='FailureNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="controlabstraction::Failure" referenceName="failures">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Failure'+container.failures->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="EdgeCreationTools" label="Create Edge">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="CreateAction" label="Action" edgeMappings="//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@edgeMappings[name='ActionEdge']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="Action" referenceName="actions">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Agent'+eAllContents()->filter(controlabstraction::Action) -> size()"/>
+                  <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="Choose state">
+                    <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                      <initialOperation/>
+                    </buttons>
+                    <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                      <initialOperation/>
+                    </buttons>
+                    <page name="Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@toolSections.1/@ownedTools[name='CreateAction']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.1/@groups.0"/>
+                    <groups name="Group" labelExpression="Group" domainClass="controlabstraction::State" semanticCandidateExpression="aql:self.target.states">
+                      <controls xsi:type="properties:ListDescription" name="chooseState" labelExpression="feature:name" valueExpression="aql:targetView.target.states">
+                        <onClickOperation>
+                          <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self"/>
+                        </onClickOperation>
+                      </controls>
+                      <controls xsi:type="properties:SelectDescription" candidatesExpression="aql:self.target.states" candidateDisplayExpression="aql:self.target.states.name">
+                        <initialOperation>
+                          <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                            <subModelOperations xsi:type="tool_1:SetValue" featureName="result"/>
+                          </firstModelOperations>
+                        </initialOperation>
+                      </controls>
+                    </groups>
+                  </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>

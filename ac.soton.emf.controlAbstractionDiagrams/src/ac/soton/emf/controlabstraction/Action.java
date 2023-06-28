@@ -15,10 +15,9 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link ac.soton.emf.controlabstraction.Action#getConditions <em>Conditions</em>}</li>
- *   <li>{@link ac.soton.emf.controlabstraction.Action#getReliances <em>Reliances</em>}</li>
- *   <li>{@link ac.soton.emf.controlabstraction.Action#getAction <em>Action</em>}</li>
  *   <li>{@link ac.soton.emf.controlabstraction.Action#getTarget <em>Target</em>}</li>
  *   <li>{@link ac.soton.emf.controlabstraction.Action#getErrors <em>Errors</em>}</li>
+ *   <li>{@link ac.soton.emf.controlabstraction.Action#getResult <em>Result</em>}</li>
  * </ul>
  *
  * @see ac.soton.emf.controlabstraction.ControlabstractionPackage#getAction()
@@ -27,72 +26,27 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Action extends AbstractNamedElement {
 	/**
-	 * Returns the value of the '<em><b>Conditions</b></em>' reference list.
-	 * The list contents are of type {@link ac.soton.emf.controlabstraction.State}.
+	 * Returns the value of the '<em><b>Conditions</b></em>' containment reference list.
+	 * The list contents are of type {@link ac.soton.emf.controlabstraction.Condition}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Conditions</em>' reference list.
+	 * @return the value of the '<em>Conditions</em>' containment reference list.
 	 * @see ac.soton.emf.controlabstraction.ControlabstractionPackage#getAction_Conditions()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
-	EList<State> getConditions();
-
-	/**
-	 * Returns the value of the '<em><b>Reliances</b></em>' reference list.
-	 * The list contents are of type {@link ac.soton.emf.controlabstraction.Assumption}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reliances</em>' reference list.
-	 * @see ac.soton.emf.controlabstraction.ControlabstractionPackage#getAction_Reliances()
-	 * @model
-	 * @generated
-	 */
-	EList<Assumption> getReliances();
-
-	/**
-	 * Returns the value of the '<em><b>Action</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Action</em>' attribute.
-	 * @see #setAction(String)
-	 * @see ac.soton.emf.controlabstraction.ControlabstractionPackage#getAction_Action()
-	 * @model
-	 * @generated
-	 */
-	String getAction();
-
-	/**
-	 * Sets the value of the '{@link ac.soton.emf.controlabstraction.Action#getAction <em>Action</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Action</em>' attribute.
-	 * @see #getAction()
-	 * @generated
-	 */
-	void setAction(String value);
+	EList<Condition> getConditions();
 
 	/**
 	 * Returns the value of the '<em><b>Target</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Target</em>' reference.
-	 * @see #setTarget(Component)
 	 * @see ac.soton.emf.controlabstraction.ControlabstractionPackage#getAction_Target()
-	 * @model
+	 * @model transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
 	Component getTarget();
-
-	/**
-	 * Sets the value of the '{@link ac.soton.emf.controlabstraction.Action#getTarget <em>Target</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Target</em>' reference.
-	 * @see #getTarget()
-	 * @generated
-	 */
-	void setTarget(Component value);
 
 	/**
 	 * Returns the value of the '<em><b>Errors</b></em>' containment reference list.
@@ -105,5 +59,27 @@ public interface Action extends AbstractNamedElement {
 	 * @generated
 	 */
 	EList<ac.soton.emf.controlabstraction.Error> getErrors();
+
+	/**
+	 * Returns the value of the '<em><b>Result</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Result</em>' reference.
+	 * @see #setResult(State)
+	 * @see ac.soton.emf.controlabstraction.ControlabstractionPackage#getAction_Result()
+	 * @model
+	 * @generated
+	 */
+	State getResult();
+
+	/**
+	 * Sets the value of the '{@link ac.soton.emf.controlabstraction.Action#getResult <em>Result</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Result</em>' reference.
+	 * @see #getResult()
+	 * @generated
+	 */
+	void setResult(State value);
 
 } // Action

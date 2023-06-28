@@ -3,24 +3,24 @@
  */
 package ac.soton.emf.controlabstraction.tests;
 
-import ac.soton.emf.controlabstraction.Action;
+import ac.soton.emf.controlabstraction.Condition;
 import ac.soton.emf.controlabstraction.ControlabstractionFactory;
 
 import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>Action</b></em>'.
+ * A test case for the model object '<em><b>Condition</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link ac.soton.emf.controlabstraction.Action#getTarget() <em>Target</em>}</li>
+ *   <li>{@link ac.soton.emf.controlabstraction.Condition#isAssumption() <em>Assumption</em>}</li>
  * </ul>
  * </p>
  * @generated
  */
-public class ActionTest extends AbstractNamedElementTest {
+public class ConditionTest extends AbstractNamedElementTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -28,28 +28,28 @@ public class ActionTest extends AbstractNamedElementTest {
 	 * @generated
 	 */
 	public static void main(String[] args) {
-		TestRunner.run(ActionTest.class);
+		TestRunner.run(ConditionTest.class);
 	}
 
 	/**
-	 * Constructs a new Action test case with the given name.
+	 * Constructs a new Condition test case with the given name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ActionTest(String name) {
+	public ConditionTest(String name) {
 		super(name);
 	}
 
 	/**
-	 * Returns the fixture for this Action test case.
+	 * Returns the fixture for this Condition test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	protected Action getFixture() {
-		return (Action)fixture;
+	protected Condition getFixture() {
+		return (Condition)fixture;
 	}
 
 	/**
@@ -60,7 +60,7 @@ public class ActionTest extends AbstractNamedElementTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(ControlabstractionFactory.eINSTANCE.createAction());
+		setFixture(ControlabstractionFactory.eINSTANCE.createCondition());
 	}
 
 	/**
@@ -75,16 +75,16 @@ public class ActionTest extends AbstractNamedElementTest {
 	}
 
 	/**
-	 * Tests the '{@link ac.soton.emf.controlabstraction.Action#getTarget() <em>Target</em>}' feature getter.
+	 * Tests the '{@link ac.soton.emf.controlabstraction.Condition#isAssumption() <em>Assumption</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see ac.soton.emf.controlabstraction.Action#getTarget()
+	 * @see ac.soton.emf.controlabstraction.Condition#isAssumption()
 	 * @generated
 	 */
-	public void testGetTarget() {
+	public void testIsAssumption() {
 		// TODO: implement this feature getter test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
-} //ActionTest
+} //ConditionTest

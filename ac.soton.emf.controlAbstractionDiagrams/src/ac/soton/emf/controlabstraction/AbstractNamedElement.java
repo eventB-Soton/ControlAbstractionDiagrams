@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see ac.soton.emf.controlabstraction.ControlabstractionPackage#getAbstractNamedElement()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface AbstractNamedElement extends EObject {

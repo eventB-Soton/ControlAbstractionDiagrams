@@ -88,6 +88,7 @@ public class SystemItemProvider extends AbstractNamedElementItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ControlabstractionPackage.Literals.SYSTEM__ENTITIES);
+			childrenFeatures.add(ControlabstractionPackage.Literals.SYSTEM__FAILURES);
 		}
 		return childrenFeatures;
 	}
@@ -147,6 +148,7 @@ public class SystemItemProvider extends AbstractNamedElementItemProvider {
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case ControlabstractionPackage.SYSTEM__ENTITIES:
+			case ControlabstractionPackage.SYSTEM__FAILURES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -177,12 +179,12 @@ public class SystemItemProvider extends AbstractNamedElementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(ControlabstractionPackage.Literals.SYSTEM__ENTITIES,
-				 ControlabstractionFactory.eINSTANCE.createAbstractStatefulEntity()));
+				 ControlabstractionFactory.eINSTANCE.createActor()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ControlabstractionPackage.Literals.SYSTEM__ENTITIES,
-				 ControlabstractionFactory.eINSTANCE.createActor()));
+				(ControlabstractionPackage.Literals.SYSTEM__FAILURES,
+				 ControlabstractionFactory.eINSTANCE.createFailure()));
 	}
 
 }

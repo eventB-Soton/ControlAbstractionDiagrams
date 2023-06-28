@@ -4,9 +4,8 @@
 package ac.soton.emf.controlabstraction.provider;
 
 
-import ac.soton.emf.controlabstraction.AbstractStatefulEntity;
-import ac.soton.emf.controlabstraction.ControlabstractionFactory;
 import ac.soton.emf.controlabstraction.ControlabstractionPackage;
+import ac.soton.emf.controlabstraction.Failure;
 
 import java.util.Collection;
 import java.util.List;
@@ -14,25 +13,25 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.ecore.EStructuralFeature;
-
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link ac.soton.emf.controlabstraction.AbstractStatefulEntity} object.
+ * This is the item provider adapter for a {@link ac.soton.emf.controlabstraction.Failure} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class AbstractStatefulEntityItemProvider extends AbstractEntityItemProvider {
+public class FailureItemProvider extends AbstractNamedElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AbstractStatefulEntityItemProvider(AdapterFactory adapterFactory) {
+	public FailureItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -47,49 +46,65 @@ public class AbstractStatefulEntityItemProvider extends AbstractEntityItemProvid
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addMitigationPropertyDescriptor(object);
+			addStatesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * This adds a property descriptor for the Mitigation feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(ControlabstractionPackage.Literals.ABSTRACT_STATEFUL_ENTITY__STATES);
-		}
-		return childrenFeatures;
+	protected void addMitigationPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Failure_mitigation_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Failure_mitigation_feature", "_UI_Failure_type"),
+				 ControlabstractionPackage.Literals.FAILURE__MITIGATION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
+	 * This adds a property descriptor for the States feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
+	protected void addStatesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Failure_states_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Failure_states_feature", "_UI_Failure_type"),
+				 ControlabstractionPackage.Literals.FAILURE__STATES,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
-	 * This returns AbstractStatefulEntity.gif.
+	 * This returns Failure.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/AbstractStatefulEntity"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Failure"));
 	}
 
 	/**
@@ -100,10 +115,10 @@ public class AbstractStatefulEntityItemProvider extends AbstractEntityItemProvid
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((AbstractStatefulEntity)object).getName();
+		String label = ((Failure)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_AbstractStatefulEntity_type") :
-			getString("_UI_AbstractStatefulEntity_type") + " " + label;
+			getString("_UI_Failure_type") :
+			getString("_UI_Failure_type") + " " + label;
 	}
 
 
@@ -118,9 +133,9 @@ public class AbstractStatefulEntityItemProvider extends AbstractEntityItemProvid
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(AbstractStatefulEntity.class)) {
-			case ControlabstractionPackage.ABSTRACT_STATEFUL_ENTITY__STATES:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+		switch (notification.getFeatureID(Failure.class)) {
+			case ControlabstractionPackage.FAILURE__MITIGATION:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
 		super.notifyChanged(notification);
@@ -136,11 +151,6 @@ public class AbstractStatefulEntityItemProvider extends AbstractEntityItemProvid
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ControlabstractionPackage.Literals.ABSTRACT_STATEFUL_ENTITY__STATES,
-				 ControlabstractionFactory.eINSTANCE.createState()));
 	}
 
 }

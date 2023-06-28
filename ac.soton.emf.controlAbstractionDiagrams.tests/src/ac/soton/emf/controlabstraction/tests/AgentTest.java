@@ -14,7 +14,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class AgentTest extends AbstractNamedElementTest {
+public class AgentTest extends AbstractActiveEntityTest {
 
 	/**
 	 * <!-- begin-user-doc -->

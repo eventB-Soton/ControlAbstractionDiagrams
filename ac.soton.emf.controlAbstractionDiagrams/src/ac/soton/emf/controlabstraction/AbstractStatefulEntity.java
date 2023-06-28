@@ -5,8 +5,6 @@ package ac.soton.emf.controlabstraction;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Abstract Stateful Entity</b></em>'.
@@ -20,10 +18,10 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see ac.soton.emf.controlabstraction.ControlabstractionPackage#getAbstractStatefulEntity()
- * @model
+ * @model abstract="true"
  * @generated
  */
-public interface AbstractStatefulEntity extends EObject {
+public interface AbstractStatefulEntity extends AbstractEntity {
 	/**
 	 * Returns the value of the '<em><b>States</b></em>' containment reference list.
 	 * The list contents are of type {@link ac.soton.emf.controlabstraction.State}.

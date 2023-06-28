@@ -4,7 +4,7 @@
 package ac.soton.emf.controlabstraction.provider;
 
 
-import ac.soton.emf.controlabstraction.Assumption;
+import ac.soton.emf.controlabstraction.AbstractEntity;
 
 import java.util.Collection;
 import java.util.List;
@@ -15,19 +15,19 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link ac.soton.emf.controlabstraction.Assumption} object.
+ * This is the item provider adapter for a {@link ac.soton.emf.controlabstraction.AbstractEntity} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class AssumptionItemProvider extends AbstractNamedElementItemProvider {
+public class AbstractEntityItemProvider extends AbstractNamedElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AssumptionItemProvider(AdapterFactory adapterFactory) {
+	public AbstractEntityItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -47,17 +47,6 @@ public class AssumptionItemProvider extends AbstractNamedElementItemProvider {
 	}
 
 	/**
-	 * This returns Assumption.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Assumption"));
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -65,10 +54,10 @@ public class AssumptionItemProvider extends AbstractNamedElementItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Assumption)object).getName();
+		String label = ((AbstractEntity)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_Assumption_type") :
-			getString("_UI_Assumption_type") + " " + label;
+			getString("_UI_AbstractEntity_type") :
+			getString("_UI_AbstractEntity_type") + " " + label;
 	}
 
 

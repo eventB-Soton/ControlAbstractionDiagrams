@@ -14,16 +14,12 @@
       <genEnumLiterals ecoreEnumLiteral="controlabstraction.ecore#//ErrorType/TIMING"/>
     </genEnums>
     <genClasses ecoreClass="controlabstraction.ecore#//Component"/>
-    <genClasses ecoreClass="controlabstraction.ecore#//Agent">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference controlabstraction.ecore#//Agent/actions"/>
-    </genClasses>
-    <genClasses ecoreClass="controlabstraction.ecore#//Assumption"/>
+    <genClasses ecoreClass="controlabstraction.ecore#//Agent"/>
     <genClasses ecoreClass="controlabstraction.ecore#//Action">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference controlabstraction.ecore#//Action/conditions"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference controlabstraction.ecore#//Action/reliances"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute controlabstraction.ecore#//Action/action"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference controlabstraction.ecore#//Action/conditions"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference controlabstraction.ecore#//Action/target"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference controlabstraction.ecore#//Action/errors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference controlabstraction.ecore#//Action/result"/>
     </genClasses>
     <genClasses ecoreClass="controlabstraction.ecore#//State"/>
     <genClasses ecoreClass="controlabstraction.ecore#//AbstractStatefulEntity">
@@ -33,19 +29,27 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute controlabstraction.ecore#//AbstractNamedElement/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute controlabstraction.ecore#//AbstractNamedElement/description"/>
     </genClasses>
-    <genClasses ecoreClass="controlabstraction.ecore#//Actor">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference controlabstraction.ecore#//Actor/assumptions"/>
-    </genClasses>
+    <genClasses ecoreClass="controlabstraction.ecore#//Actor"/>
     <genClasses ecoreClass="controlabstraction.ecore#//Error">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute controlabstraction.ecore#//Error/type"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference controlabstraction.ecore#//Error/failure"/>
     </genClasses>
-    <genClasses ecoreClass="controlabstraction.ecore#//ThreatCondition">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute controlabstraction.ecore#//ThreatCondition/mitigation"/>
+    <genClasses ecoreClass="controlabstraction.ecore#//Failure">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute controlabstraction.ecore#//Failure/mitigation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference controlabstraction.ecore#//Failure/states"/>
     </genClasses>
     <genClasses ecoreClass="controlabstraction.ecore#//System">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference controlabstraction.ecore#//System/entities"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute controlabstraction.ecore#//System/purpose"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference controlabstraction.ecore#//System/failures"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="controlabstraction.ecore#//AbstractEntity"/>
+    <genClasses ecoreClass="controlabstraction.ecore#//AbstractActiveEntity">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference controlabstraction.ecore#//AbstractActiveEntity/actions"/>
+    </genClasses>
+    <genClasses ecoreClass="controlabstraction.ecore#//Condition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference controlabstraction.ecore#//Condition/state"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute controlabstraction.ecore#//Condition/assumption"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
