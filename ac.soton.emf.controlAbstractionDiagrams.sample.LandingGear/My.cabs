@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<controlabstraction:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:controlabstraction="http://soton.ac.uk/models/eventb/controlabstraction/2023" name="Landing Gear" description="Aircraft Landing Gear" purpose="To extend the landing gear wheels before and while landing/landed and retract them for more efficient flying">
+  <entities xsi:type="controlabstraction:Component" name="Gear" description="The physical landing gear apparatus">
+    <states name="EXTENDED"/>
+    <states name="RETRACTED"/>
+  </entities>
+  <entities xsi:type="controlabstraction:Agent" name="LGCU" description="Landing Gear Control Unit">
+    <actions name="extend" description="extend the landing gear" result="//@entities.0/@states.0"/>
+    <actions name="retract" description="retract the landing gear" result="//@entities.0/@states.1">
+      <conditions name="C1" description="The aircraft  is  not landed" state="//@entities.2/@states.0"/>
+    </actions>
+  </entities>
+  <entities xsi:type="controlabstraction:Component" name="AC" description="The aircraft to which the landing gear belongs">
+    <states name="FLYING"/>
+    <states name="LANDED"/>
+  </entities>
+  <entities xsi:type="controlabstraction:Actor" name="Pilot" description="The  person flying the aircraft">
+    <actions name="land" description="The pilot lands the aircraft" result="//@entities.2/@states.1">
+      <conditions name="A1" description="The pilot will not land unless the gear is extended" state="//@entities.0/@states.0"/>
+    </actions>
+    <actions name="takeof" description="The pilot takes off the aircraft" result="//@entities.2/@states.0"/>
+  </entities>
+  <failures name="FC1" description="Gear is retracted while aircraft is landed" states="//@entities.0/@states.1 //@entities.2/@states.1"/>
+</controlabstraction:System>
