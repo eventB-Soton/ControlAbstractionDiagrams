@@ -121,29 +121,6 @@ public class ControlabstractionItemProviderAdapterFactory extends Controlabstrac
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ac.soton.emf.controlabstraction.Assumption} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AssumptionItemProvider assumptionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link ac.soton.emf.controlabstraction.Assumption}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAssumptionAdapter() {
-		if (assumptionItemProvider == null) {
-			assumptionItemProvider = new AssumptionItemProvider(this);
-		}
-
-		return assumptionItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link ac.soton.emf.controlabstraction.Action} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -187,52 +164,6 @@ public class ControlabstractionItemProviderAdapterFactory extends Controlabstrac
 		}
 
 		return stateItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link ac.soton.emf.controlabstraction.AbstractStatefulEntity} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AbstractStatefulEntityItemProvider abstractStatefulEntityItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link ac.soton.emf.controlabstraction.AbstractStatefulEntity}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAbstractStatefulEntityAdapter() {
-		if (abstractStatefulEntityItemProvider == null) {
-			abstractStatefulEntityItemProvider = new AbstractStatefulEntityItemProvider(this);
-		}
-
-		return abstractStatefulEntityItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link ac.soton.emf.controlabstraction.AbstractNamedElement} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AbstractNamedElementItemProvider abstractNamedElementItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link ac.soton.emf.controlabstraction.AbstractNamedElement}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAbstractNamedElementAdapter() {
-		if (abstractNamedElementItemProvider == null) {
-			abstractNamedElementItemProvider = new AbstractNamedElementItemProvider(this);
-		}
-
-		return abstractNamedElementItemProvider;
 	}
 
 	/**
@@ -302,6 +233,52 @@ public class ControlabstractionItemProviderAdapterFactory extends Controlabstrac
 		}
 
 		return failureItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link ac.soton.emf.controlabstraction.System} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SystemItemProvider systemItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ac.soton.emf.controlabstraction.System}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSystemAdapter() {
+		if (systemItemProvider == null) {
+			systemItemProvider = new SystemItemProvider(this);
+		}
+
+		return systemItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link ac.soton.emf.controlabstraction.Condition} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ConditionItemProvider conditionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ac.soton.emf.controlabstraction.Condition}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createConditionAdapter() {
+		if (conditionItemProvider == null) {
+			conditionItemProvider = new ConditionItemProvider(this);
+		}
+
+		return conditionItemProvider;
 	}
 
 	/**
@@ -411,14 +388,13 @@ public class ControlabstractionItemProviderAdapterFactory extends Controlabstrac
 	public void dispose() {
 		if (componentItemProvider != null) componentItemProvider.dispose();
 		if (agentItemProvider != null) agentItemProvider.dispose();
-		if (assumptionItemProvider != null) assumptionItemProvider.dispose();
 		if (actionItemProvider != null) actionItemProvider.dispose();
 		if (stateItemProvider != null) stateItemProvider.dispose();
-		if (abstractStatefulEntityItemProvider != null) abstractStatefulEntityItemProvider.dispose();
-		if (abstractNamedElementItemProvider != null) abstractNamedElementItemProvider.dispose();
 		if (actorItemProvider != null) actorItemProvider.dispose();
 		if (errorItemProvider != null) errorItemProvider.dispose();
 		if (failureItemProvider != null) failureItemProvider.dispose();
+		if (systemItemProvider != null) systemItemProvider.dispose();
+		if (conditionItemProvider != null) conditionItemProvider.dispose();
 	}
 
 }

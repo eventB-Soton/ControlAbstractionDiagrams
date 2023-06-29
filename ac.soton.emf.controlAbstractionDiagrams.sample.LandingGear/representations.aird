@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:controlabstraction="http://soton.ac.uk/models/eventb/controlabstraction/2023" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_qrekQBEDEe6uGYFdy87--w" selectedViews="_nTGQwBGTEe6g-vAOfrZkjA" version="15.2.0.202303281325">
+    <semanticResources>My.cabs</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_Fq6mMBEEEe6uGYFdy87--w">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_JdW9EBEEEe6uGYFdy87--w" name="new cabsDiagram" repPath="#_JdWWABEEEe6uGYFdy87--w" changeId="1687445600741">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']"/>
+        <target xmi:type="controlabstraction:System" href="My.cabs#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+    <ownedViews xmi:type="viewpoint:DView" uid="_nTGQwBGTEe6g-vAOfrZkjA">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_oytpYBGTEe6g-vAOfrZkjA" name="cabs1" repPath="#_oySyoBGTEe6g-vAOfrZkjA" changeId="1687933882151">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']"/>
+        <target xmi:type="controlabstraction:System" href="My.cabs#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_JdWWABEEEe6uGYFdy87--w">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_JdXkIBEEEe6uGYFdy87--w" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_JdXkIREEEe6uGYFdy87--w" type="Sirius" element="_JdWWABEEEe6uGYFdy87--w" measurementUnit="Pixel">
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_JdXkIhEEEe6uGYFdy87--w"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_JdYyQBEEEe6uGYFdy87--w" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_JdYyQREEEe6uGYFdy87--w"/>
+    </ownedAnnotationEntries>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_JdWWAREEEe6uGYFdy87--w"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer"/>
+    <target xmi:type="controlabstraction:System" href="My.cabs#/"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram uid="_oySyoBGTEe6g-vAOfrZkjA">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_ozBycBGTEe6g-vAOfrZkjA" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_ozBycRGTEe6g-vAOfrZkjA" type="Sirius" element="_oySyoBGTEe6g-vAOfrZkjA" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_ybQscBGdEe6g-vAOfrZkjA" type="2001" element="_ybOQMBGdEe6g-vAOfrZkjA">
+          <children xmi:type="notation:Node" xmi:id="_ybQscxGdEe6g-vAOfrZkjA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_ybQsdBGdEe6g-vAOfrZkjA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ybQseBGdEe6g-vAOfrZkjA" type="3016" element="_ybOQMRGdEe6g-vAOfrZkjA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_ybQseRGdEe6g-vAOfrZkjA" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ybQsehGdEe6g-vAOfrZkjA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_ybQscRGdEe6g-vAOfrZkjA" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ybQschGdEe6g-vAOfrZkjA" x="67" y="324" width="100" height="60"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_k7kBkBGnEe6g-vAOfrZkjA" type="2001" element="_k5WbExGnEe6g-vAOfrZkjA">
+          <children xmi:type="notation:Node" xmi:id="_k7kBkxGnEe6g-vAOfrZkjA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_k7kBlBGnEe6g-vAOfrZkjA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_k7kBlRGnEe6g-vAOfrZkjA" type="3016" element="_k5WbFBGnEe6g-vAOfrZkjA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_k7kBlhGnEe6g-vAOfrZkjA" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_k7kBlxGnEe6g-vAOfrZkjA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_k7kBkRGnEe6g-vAOfrZkjA" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_k7kBkhGnEe6g-vAOfrZkjA" x="455" y="52" width="100" height="60"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_D-CRgBTREe6oHfWVz2cv2w" type="2001" element="_D9nawBTREe6oHfWVz2cv2w">
+          <children xmi:type="notation:Node" xmi:id="_D-HxEBTREe6oHfWVz2cv2w" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_D-HxERTREe6oHfWVz2cv2w" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_D-KNUBTREe6oHfWVz2cv2w" type="3003" element="_D9xLwBTREe6oHfWVz2cv2w">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_D-KNURTREe6oHfWVz2cv2w" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_D-KNUhTREe6oHfWVz2cv2w"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_D-CRgRTREe6oHfWVz2cv2w" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_D-CRghTREe6oHfWVz2cv2w" x="39" y="24" width="200" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_aKeCABTSEe6oHfWVz2cv2w" type="2001" element="_aHSyMBTSEe6oHfWVz2cv2w">
+          <children xmi:type="notation:Node" xmi:id="_aKepEBTSEe6oHfWVz2cv2w" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_aKepERTSEe6oHfWVz2cv2w" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_amzYsBTSEe6oHfWVz2cv2w" type="3005" element="_aHUAUBTSEe6oHfWVz2cv2w">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_amzYsRTSEe6oHfWVz2cv2w" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_amzYshTSEe6oHfWVz2cv2w"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_aKeCARTSEe6oHfWVz2cv2w" fontName=".AppleSystemUIFont" fontHeight="10" italic="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aKeCAhTSEe6oHfWVz2cv2w" x="232" y="184" width="200" height="200"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_ojWScBTaEe6oHfWVz2cv2w" type="2001" element="_oiaeUBTaEe6oHfWVz2cv2w">
+          <children xmi:type="notation:Node" xmi:id="_ojWScxTaEe6oHfWVz2cv2w" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_ojWSdBTaEe6oHfWVz2cv2w" x="-16"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ojW5gBTaEe6oHfWVz2cv2w" type="3016" element="_oiaeURTaEe6oHfWVz2cv2w">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_ojW5gRTaEe6oHfWVz2cv2w" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ojW5ghTaEe6oHfWVz2cv2w"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_ojWScRTaEe6oHfWVz2cv2w" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ojWSchTaEe6oHfWVz2cv2w" x="255" y="148" width="10" height="10"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_NLf5EBTxEe6oHfWVz2cv2w" type="2003" element="_NIu48BTxEe6oHfWVz2cv2w">
+          <children xmi:type="notation:Node" xmi:id="_NLhHMBTxEe6oHfWVz2cv2w" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_NLkKgBTxEe6oHfWVz2cv2w" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_UrK6MBTyEe6oHfWVz2cv2w" type="3010" element="_Un9OIBTyEe6oHfWVz2cv2w">
+              <styles xmi:type="notation:FontStyle" xmi:id="_UrK6MRTyEe6oHfWVz2cv2w" fontName=".AppleSystemUIFont"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_UrK6MhTyEe6oHfWVz2cv2w"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_UrK6MxTyEe6oHfWVz2cv2w" type="3010" element="_Un9OIRTyEe6oHfWVz2cv2w">
+              <styles xmi:type="notation:FontStyle" xmi:id="_UrK6NBTyEe6oHfWVz2cv2w" fontName=".AppleSystemUIFont"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_UrK6NRTyEe6oHfWVz2cv2w"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_NLkKgRTxEe6oHfWVz2cv2w"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_NLkKghTxEe6oHfWVz2cv2w"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_NLf5ERTxEe6oHfWVz2cv2w" fontName=".AppleSystemUIFont"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NLf5EhTxEe6oHfWVz2cv2w" x="507" y="224" width="108" height="67"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_NLkxkBTxEe6oHfWVz2cv2w" type="2003" element="_NIvgABTxEe6oHfWVz2cv2w">
+          <children xmi:type="notation:Node" xmi:id="_NLkxkxTxEe6oHfWVz2cv2w" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_NLkxlBTxEe6oHfWVz2cv2w" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_UrLhQBTyEe6oHfWVz2cv2w" type="3010" element="_Un91MBTyEe6oHfWVz2cv2w">
+              <styles xmi:type="notation:FontStyle" xmi:id="_UrLhQRTyEe6oHfWVz2cv2w" fontName=".AppleSystemUIFont"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_UrLhQhTyEe6oHfWVz2cv2w"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_UrLhQxTyEe6oHfWVz2cv2w" type="3010" element="_Un91MRTyEe6oHfWVz2cv2w">
+              <styles xmi:type="notation:FontStyle" xmi:id="_UrLhRBTyEe6oHfWVz2cv2w" fontName=".AppleSystemUIFont"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_UrLhRRTyEe6oHfWVz2cv2w"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_NLkxlRTxEe6oHfWVz2cv2w"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_NLkxlhTxEe6oHfWVz2cv2w"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_NLkxkRTxEe6oHfWVz2cv2w" fontName=".AppleSystemUIFont"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NLkxkhTxEe6oHfWVz2cv2w" x="46" y="121" width="95" height="66"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_ozBychGTEe6g-vAOfrZkjA"/>
+        <edges xmi:type="notation:Edge" xmi:id="_IgfbIBT0Ee6oHfWVz2cv2w" type="4001" element="_Ic-NEBT0Ee6oHfWVz2cv2w" source="_k7kBkBGnEe6g-vAOfrZkjA" target="_NLf5EBTxEe6oHfWVz2cv2w">
+          <children xmi:type="notation:Node" xmi:id="_IgfbJBT0Ee6oHfWVz2cv2w" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IgfbJRT0Ee6oHfWVz2cv2w" x="1" y="-8"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_IgfbJhT0Ee6oHfWVz2cv2w" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IgfbJxT0Ee6oHfWVz2cv2w" x="11" y="7"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_IggCMBT0Ee6oHfWVz2cv2w" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IggCMRT0Ee6oHfWVz2cv2w" x="13" y="-6"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_IgfbIRT0Ee6oHfWVz2cv2w"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_IgfbIhT0Ee6oHfWVz2cv2w" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IgfbIxT0Ee6oHfWVz2cv2w" points="[31, 30, -37, -154]$[114, 110, 46, -74]$[94, 142, 26, -42]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IggCMhT0Ee6oHfWVz2cv2w" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IggCMxT0Ee6oHfWVz2cv2w" id="(0.6273584905660378,0.6538461538461539)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_IggCNBT0Ee6oHfWVz2cv2w" type="4001" element="_Ic-0IhT0Ee6oHfWVz2cv2w" source="_k7kBkBGnEe6g-vAOfrZkjA" target="_NLf5EBTxEe6oHfWVz2cv2w">
+          <children xmi:type="notation:Node" xmi:id="_IggCOBT0Ee6oHfWVz2cv2w" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IggCORT0Ee6oHfWVz2cv2w" x="-21" y="-14"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_IggCOhT0Ee6oHfWVz2cv2w" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IggCOxT0Ee6oHfWVz2cv2w" x="6" y="4"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_IggpQBT0Ee6oHfWVz2cv2w" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IggpQRT0Ee6oHfWVz2cv2w" x="4" y="6"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_IggCNRT0Ee6oHfWVz2cv2w"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_IggCNhT0Ee6oHfWVz2cv2w" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IggCNxT0Ee6oHfWVz2cv2w" points="[-9, 30, -77, -154]$[-22, 78, -90, -106]$[32, 142, -36, -42]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IggpQhT0Ee6oHfWVz2cv2w" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IggpQxT0Ee6oHfWVz2cv2w" id="(0.6273584905660378,0.6538461538461539)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_IggpRBT0Ee6oHfWVz2cv2w" type="4001" element="_Ic-0JxT0Ee6oHfWVz2cv2w" source="_ybQscBGdEe6g-vAOfrZkjA" target="_NLkxkBTxEe6oHfWVz2cv2w">
+          <children xmi:type="notation:Node" xmi:id="_IggpSBT0Ee6oHfWVz2cv2w" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IggpSRT0Ee6oHfWVz2cv2w" x="20" y="-4"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_IggpShT0Ee6oHfWVz2cv2w" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IggpSxT0Ee6oHfWVz2cv2w" x="-8" y="2"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_IggpTBT0Ee6oHfWVz2cv2w" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IggpTRT0Ee6oHfWVz2cv2w" y="-6"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_IggpRRT0Ee6oHfWVz2cv2w"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_IggpRhT0Ee6oHfWVz2cv2w" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IggpRxT0Ee6oHfWVz2cv2w" points="[0, -2, 30, 139]$[0, -94, 30, 47]$[-30, -141, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IghQUBT0Ee6oHfWVz2cv2w" id="(0.97,0.03333333333333333)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IghQURT0Ee6oHfWVz2cv2w" id="(0.946236559139785,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_IghQUhT0Ee6oHfWVz2cv2w" type="4001" element="_IdACSBT0Ee6oHfWVz2cv2w" source="_aKeCABTSEe6oHfWVz2cv2w" target="_IggpRBT0Ee6oHfWVz2cv2w">
+          <children xmi:type="notation:Node" xmi:id="_IghQVhT0Ee6oHfWVz2cv2w" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IghQVxT0Ee6oHfWVz2cv2w" x="1" y="-9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_IghQWBT0Ee6oHfWVz2cv2w" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IghQWRT0Ee6oHfWVz2cv2w" x="-1" y="11"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_IghQWhT0Ee6oHfWVz2cv2w" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IghQWxT0Ee6oHfWVz2cv2w" x="-1" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_IghQUxT0Ee6oHfWVz2cv2w"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_IghQVBT0Ee6oHfWVz2cv2w" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IghQVRT0Ee6oHfWVz2cv2w" points="[-100, -2, 150, 3]$[-244, -5, 6, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IgiecBT0Ee6oHfWVz2cv2w" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IgiecRT0Ee6oHfWVz2cv2w" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_IgiechT0Ee6oHfWVz2cv2w" type="4001" element="_IdACTRT0Ee6oHfWVz2cv2w" source="_ojWScBTaEe6oHfWVz2cv2w" target="_IggCNBT0Ee6oHfWVz2cv2w">
+          <children xmi:type="notation:Node" xmi:id="_IgiedhT0Ee6oHfWVz2cv2w" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IgiedxT0Ee6oHfWVz2cv2w" x="2" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_IgjFgBT0Ee6oHfWVz2cv2w" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IgjFgRT0Ee6oHfWVz2cv2w" x="-2" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_IgjFghT0Ee6oHfWVz2cv2w" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IgjFgxT0Ee6oHfWVz2cv2w" x="-2" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_IgiecxT0Ee6oHfWVz2cv2w"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_IgiedBT0Ee6oHfWVz2cv2w" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IgiedRT0Ee6oHfWVz2cv2w" points="[5, -1, -196, 34]$[200, -35, -1, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IgjFhBT0Ee6oHfWVz2cv2w" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IgjFhRT0Ee6oHfWVz2cv2w" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_uuuQwBT0Ee6oHfWVz2cv2w" type="4001" element="_urbFIBT0Ee6oHfWVz2cv2w" source="_aKeCABTSEe6oHfWVz2cv2w" target="_NLf5EBTxEe6oHfWVz2cv2w">
+          <children xmi:type="notation:Node" xmi:id="_uuuQxBT0Ee6oHfWVz2cv2w" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uuuQxRT0Ee6oHfWVz2cv2w" x="-7" y="-11"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_uuuQxhT0Ee6oHfWVz2cv2w" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uuuQxxT0Ee6oHfWVz2cv2w" x="3" y="7"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_uuuQyBT0Ee6oHfWVz2cv2w" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uuuQyRT0Ee6oHfWVz2cv2w" x="4" y="8"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_uuuQwRT0Ee6oHfWVz2cv2w"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_uuuQwhT0Ee6oHfWVz2cv2w" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_uuuQwxT0Ee6oHfWVz2cv2w" points="[100, -13, -128, 15]$[175, -22, -53, 6]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uuu30BT0Ee6oHfWVz2cv2w" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uuu30RT0Ee6oHfWVz2cv2w" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_uuu30hT0Ee6oHfWVz2cv2w" type="4001" element="_urbFJRT0Ee6oHfWVz2cv2w" source="_ojWScBTaEe6oHfWVz2cv2w" target="_NLkxkBTxEe6oHfWVz2cv2w">
+          <children xmi:type="notation:Node" xmi:id="_uuu31hT0Ee6oHfWVz2cv2w" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uuu31xT0Ee6oHfWVz2cv2w" y="9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_uuu32BT0Ee6oHfWVz2cv2w" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uuu32RT0Ee6oHfWVz2cv2w" x="1" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_uuu32hT0Ee6oHfWVz2cv2w" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uuu32xT0Ee6oHfWVz2cv2w" y="-8"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_uuu30xT0Ee6oHfWVz2cv2w"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_uuu31BT0Ee6oHfWVz2cv2w" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_uuu31RT0Ee6oHfWVz2cv2w" points="[-5, 0, 163, 0]$[-121, 0, 47, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uuu33BT0Ee6oHfWVz2cv2w" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uuu33RT0Ee6oHfWVz2cv2w" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_XfeFcBUAEe6oHfWVz2cv2w" type="4001" element="_XfbpQRUAEe6oHfWVz2cv2w" source="_ybQscBGdEe6g-vAOfrZkjA" target="_NLkxkBTxEe6oHfWVz2cv2w">
+          <children xmi:type="notation:Node" xmi:id="_XfeFdBUAEe6oHfWVz2cv2w" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XfeFdRUAEe6oHfWVz2cv2w" x="10" y="1"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_XfeFdhUAEe6oHfWVz2cv2w" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XfeFdxUAEe6oHfWVz2cv2w" x="-10" y="-1"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_XfesgBUAEe6oHfWVz2cv2w" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XfesgRUAEe6oHfWVz2cv2w" x="-10" y="-1"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_XfeFcRUAEe6oHfWVz2cv2w"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_XfeFchUAEe6oHfWVz2cv2w" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XfeFcxUAEe6oHfWVz2cv2w" points="[-2, -20, 14, 140]$[-16, -159, 0, 1]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XfesghUAEe6oHfWVz2cv2w" id="(0.06,0.3333333333333333)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XfesgxUAEe6oHfWVz2cv2w" id="(0.11827956989247312,0.984375)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_ozRDABGTEe6g-vAOfrZkjA" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_ozRDARGTEe6g-vAOfrZkjA"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_ybOQMBGdEe6g-vAOfrZkjA" name="Pilot" tooltipText="Create an Actor in the system" outgoingEdges="_o02LkhStEe6ctuDPTyqC0g _Ic-0JxT0Ee6oHfWVz2cv2w _XfbpQRUAEe6oHfWVz2cv2w" width="10" height="6" resizeKind="NSEW">
+      <target xmi:type="controlabstraction:Actor" href="My.cabs#//@entities.3"/>
+      <semanticElements xmi:type="controlabstraction:Actor" href="My.cabs#//@entities.3"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" uid="_ybOQMRGdEe6g-vAOfrZkjA" labelSize="12" labelPosition="node" horizontalDiameter="10" verticalDiameter="6" color="253,206,137">
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@nodeMappings[name='ActorNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@nodeMappings[name='ActorNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_k5WbExGnEe6g-vAOfrZkjA" name="LGCU" outgoingEdges="_E-8fQBStEe6ctuDPTyqC0g _YFuGkBTTEe6oHfWVz2cv2w _Ic-NEBT0Ee6oHfWVz2cv2w _Ic-0IhT0Ee6oHfWVz2cv2w" width="10" height="6" resizeKind="NSEW">
+      <target xmi:type="controlabstraction:Agent" href="My.cabs#//@entities.1"/>
+      <semanticElements xmi:type="controlabstraction:Agent" href="My.cabs#//@entities.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" uid="_k5WbFBGnEe6g-vAOfrZkjA" labelSize="12" borderColor="252,233,79" labelPosition="node" horizontalDiameter="10" verticalDiameter="6" color="255,245,181">
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@nodeMappings[name='AgentNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@nodeMappings[name='AgentNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_E-8fQBStEe6ctuDPTyqC0g" name="extend -> EXTENDED" sourceNode="_k5WbExGnEe6g-vAOfrZkjA">
+      <target xmi:type="controlabstraction:Action" href="My.cabs#//@entities.1/@actions.0"/>
+      <semanticElements xmi:type="controlabstraction:Action" href="My.cabs#//@entities.1/@actions.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_E_AwsBStEe6ctuDPTyqC0g" targetArrow="InputFillClosedArrow" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@edgeMappings[name='ActionEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_E_BXwBStEe6ctuDPTyqC0g" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@edgeMappings[name='ActionEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_o02LkhStEe6ctuDPTyqC0g" name="land -> LANDED" incomingEdges="_VFCxkBTYEe6oHfWVz2cv2w" sourceNode="_ybOQMBGdEe6g-vAOfrZkjA">
+      <target xmi:type="controlabstraction:Action" href="My.cabs#//@entities.3/@actions.0"/>
+      <semanticElements xmi:type="controlabstraction:Action" href="My.cabs#//@entities.3/@actions.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_o02yoBStEe6ctuDPTyqC0g" targetArrow="InputFillClosedArrow" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@edgeMappings[name='ActionEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_o02yoRStEe6ctuDPTyqC0g" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@edgeMappings[name='ActionEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_D9nawBTREe6oHfWVz2cv2w" name="FAILURE CONDITION&#xA;FC1: (RETRACTED AND LANDED)" width="20" height="5" resizeKind="NSEW">
+      <target xmi:type="controlabstraction:Failure" href="My.cabs#//@failures.0"/>
+      <semanticElements xmi:type="controlabstraction:Failure" href="My.cabs#//@failures.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_D9xLwBTREe6oHfWVz2cv2w" labelSize="12" showIcon="false" labelPosition="node" width="20" height="5" color="246,139,139">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@nodeMappings[name='FailureNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@nodeMappings[name='FailureNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_aHSyMBTSEe6oHfWVz2cv2w" name="A1: [EXTENDED]&#xA;The pilot will not land unless the gear is extended" tooltipText="an asssumption about the behaviour of an actor" outgoingEdges="_VFCxkBTYEe6oHfWVz2cv2w _BuVJpBTaEe6oHfWVz2cv2w _IdACSBT0Ee6oHfWVz2cv2w _urbFIBT0Ee6oHfWVz2cv2w" width="20" height="20" resizeKind="NSEW">
+      <target xmi:type="controlabstraction:Condition" href="My.cabs#//@entities.3/@actions.0/@conditions.0"/>
+      <semanticElements xmi:type="controlabstraction:Condition" href="My.cabs#//@entities.3/@actions.0/@conditions.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_aHUAUBTSEe6oHfWVz2cv2w" labelSize="10" showIcon="false" borderColor="114,159,207" labelPosition="node" workspacePath="/ac.soton.emf.controlAbstractDiagrams.sirius/images/assumption.svg">
+        <labelFormat>italic</labelFormat>
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@nodeMappings[name='AssumptionNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@nodeMappings[name='AssumptionNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_YFuGkBTTEe6oHfWVz2cv2w" name="retract -> RETRACTED" incomingEdges="_oidhpBTaEe6oHfWVz2cv2w" sourceNode="_k5WbExGnEe6g-vAOfrZkjA">
+      <target xmi:type="controlabstraction:Action" href="My.cabs#//@entities.1/@actions.1"/>
+      <semanticElements xmi:type="controlabstraction:Action" href="My.cabs#//@entities.1/@actions.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_YFuGkRTTEe6oHfWVz2cv2w" targetArrow="InputFillClosedArrow" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@edgeMappings[name='ActionEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_YFuGkhTTEe6oHfWVz2cv2w" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@edgeMappings[name='ActionEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_VFCxkBTYEe6oHfWVz2cv2w" sourceNode="_aHSyMBTSEe6oHfWVz2cv2w" targetNode="_o02LkhStEe6ctuDPTyqC0g">
+      <target xmi:type="controlabstraction:Condition" href="My.cabs#//@entities.3/@actions.0/@conditions.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_VFCxkRTYEe6oHfWVz2cv2w" lineStyle="dash" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@edgeMappings[name='AssumptionTargetEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_VFCxkhTYEe6oHfWVz2cv2w" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@edgeMappings[name='AssumptionTargetEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_BuVJpBTaEe6oHfWVz2cv2w" sourceNode="_aHSyMBTSEe6oHfWVz2cv2w">
+      <target xmi:type="controlabstraction:Condition" href="My.cabs#//@entities.3/@actions.0/@conditions.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_BuVJpRTaEe6oHfWVz2cv2w" lineStyle="dot" targetArrow="NoDecoration" size="2" strokeColor="209,209,209">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@edgeMappings[name='ConditionStateEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_BuVJphTaEe6oHfWVz2cv2w" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@edgeMappings[name='ConditionStateEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_oiaeUBTaEe6oHfWVz2cv2w" name="C1: [FLYING]" outgoingEdges="_oicThBTaEe6oHfWVz2cv2w _oidhpBTaEe6oHfWVz2cv2w _IdACTRT0Ee6oHfWVz2cv2w _urbFJRT0Ee6oHfWVz2cv2w" width="1" height="1" resizeKind="NSEW">
+      <target xmi:type="controlabstraction:Condition" href="My.cabs#//@entities.1/@actions.1/@conditions.0"/>
+      <semanticElements xmi:type="controlabstraction:Condition" href="My.cabs#//@entities.1/@actions.1/@conditions.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" uid="_oiaeURTaEe6oHfWVz2cv2w" labelSize="12" showIcon="false" horizontalDiameter="1" verticalDiameter="1">
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@nodeMappings[name='ConditionNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@nodeMappings[name='ConditionNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_oicThBTaEe6oHfWVz2cv2w" sourceNode="_oiaeUBTaEe6oHfWVz2cv2w">
+      <target xmi:type="controlabstraction:Condition" href="My.cabs#//@entities.1/@actions.1/@conditions.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_oicThRTaEe6oHfWVz2cv2w" lineStyle="dot" targetArrow="NoDecoration" size="2" strokeColor="209,209,209">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@edgeMappings[name='ConditionStateEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_oicThhTaEe6oHfWVz2cv2w" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@edgeMappings[name='ConditionStateEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_oidhpBTaEe6oHfWVz2cv2w" sourceNode="_oiaeUBTaEe6oHfWVz2cv2w" targetNode="_YFuGkBTTEe6oHfWVz2cv2w">
+      <target xmi:type="controlabstraction:Condition" href="My.cabs#//@entities.1/@actions.1/@conditions.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_oidhpRTaEe6oHfWVz2cv2w" lineStyle="dash" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@edgeMappings[name='AssumptionTargetEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_oidhphTaEe6oHfWVz2cv2w" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@edgeMappings[name='AssumptionTargetEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_NIu48BTxEe6oHfWVz2cv2w" name="Gear" incomingEdges="_Ic-NEBT0Ee6oHfWVz2cv2w _Ic-0IhT0Ee6oHfWVz2cv2w _urbFIBT0Ee6oHfWVz2cv2w">
+      <target xmi:type="controlabstraction:Component" href="My.cabs#//@entities.0"/>
+      <semanticElements xmi:type="controlabstraction:Component" href="My.cabs#//@entities.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_bvVV8BTxEe6oHfWVz2cv2w" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="GradientTopToBottom" backgroundColor="204,242,166">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@containerMappings[name='ComponentContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@containerMappings[name='ComponentContainer']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_Un9OIBTyEe6oHfWVz2cv2w" name="EXTENDED">
+        <target xmi:type="controlabstraction:State" href="My.cabs#//@entities.0/@states.0"/>
+        <semanticElements xmi:type="controlabstraction:State" href="My.cabs#//@entities.0/@states.0"/>
+        <ownedStyle xmi:type="diagram:CustomStyle" uid="_6pfrkBTyEe6oHfWVz2cv2w" labelSize="12" showIcon="false" labelAlignment="LEFT" labelPosition="node">
+          <description xmi:type="style:CustomStyleDescription" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@containerMappings[name='ComponentContainer']/@subNodeMappings[name='StateNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@containerMappings[name='ComponentContainer']/@subNodeMappings[name='StateNode']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_Un9OIRTyEe6oHfWVz2cv2w" name="RETRACTED">
+        <target xmi:type="controlabstraction:State" href="My.cabs#//@entities.0/@states.1"/>
+        <semanticElements xmi:type="controlabstraction:State" href="My.cabs#//@entities.0/@states.1"/>
+        <ownedStyle xmi:type="diagram:CustomStyle" uid="_6pfrkRTyEe6oHfWVz2cv2w" labelSize="12" showIcon="false" labelAlignment="LEFT" labelPosition="node">
+          <description xmi:type="style:CustomStyleDescription" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@containerMappings[name='ComponentContainer']/@subNodeMappings[name='StateNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@containerMappings[name='ComponentContainer']/@subNodeMappings[name='StateNode']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_NIvgABTxEe6oHfWVz2cv2w" name="AC" incomingEdges="_Ic-0JxT0Ee6oHfWVz2cv2w _urbFJRT0Ee6oHfWVz2cv2w _XfbpQRUAEe6oHfWVz2cv2w">
+      <target xmi:type="controlabstraction:Component" href="My.cabs#//@entities.2"/>
+      <semanticElements xmi:type="controlabstraction:Component" href="My.cabs#//@entities.2"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_bvVV8hTxEe6oHfWVz2cv2w" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="GradientTopToBottom" backgroundColor="204,242,166">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@containerMappings[name='ComponentContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@containerMappings[name='ComponentContainer']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_Un91MBTyEe6oHfWVz2cv2w" name="FLYING">
+        <target xmi:type="controlabstraction:State" href="My.cabs#//@entities.2/@states.0"/>
+        <semanticElements xmi:type="controlabstraction:State" href="My.cabs#//@entities.2/@states.0"/>
+        <ownedStyle xmi:type="diagram:CustomStyle" uid="_6pgSoBTyEe6oHfWVz2cv2w" labelSize="12" showIcon="false" labelAlignment="LEFT" labelPosition="node">
+          <description xmi:type="style:CustomStyleDescription" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@containerMappings[name='ComponentContainer']/@subNodeMappings[name='StateNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@containerMappings[name='ComponentContainer']/@subNodeMappings[name='StateNode']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_Un91MRTyEe6oHfWVz2cv2w" name="LANDED">
+        <target xmi:type="controlabstraction:State" href="My.cabs#//@entities.2/@states.1"/>
+        <semanticElements xmi:type="controlabstraction:State" href="My.cabs#//@entities.2/@states.1"/>
+        <ownedStyle xmi:type="diagram:CustomStyle" uid="_6pgSoRTyEe6oHfWVz2cv2w" labelSize="12" showIcon="false" labelAlignment="LEFT" labelPosition="node">
+          <description xmi:type="style:CustomStyleDescription" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@containerMappings[name='ComponentContainer']/@subNodeMappings[name='StateNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@containerMappings[name='ComponentContainer']/@subNodeMappings[name='StateNode']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Ic-NEBT0Ee6oHfWVz2cv2w" name="extend -> EXTENDED" sourceNode="_k5WbExGnEe6g-vAOfrZkjA" targetNode="_NIu48BTxEe6oHfWVz2cv2w">
+      <target xmi:type="controlabstraction:Action" href="My.cabs#//@entities.1/@actions.0"/>
+      <semanticElements xmi:type="controlabstraction:Action" href="My.cabs#//@entities.1/@actions.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Ic-NERT0Ee6oHfWVz2cv2w" targetArrow="InputFillClosedArrow" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@edgeMappings[name='ActionEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_Ic-NEhT0Ee6oHfWVz2cv2w" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@edgeMappings[name='ActionEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Ic-0IhT0Ee6oHfWVz2cv2w" name="retract -> RETRACTED" incomingEdges="_IdACTRT0Ee6oHfWVz2cv2w" sourceNode="_k5WbExGnEe6g-vAOfrZkjA" targetNode="_NIu48BTxEe6oHfWVz2cv2w">
+      <target xmi:type="controlabstraction:Action" href="My.cabs#//@entities.1/@actions.1"/>
+      <semanticElements xmi:type="controlabstraction:Action" href="My.cabs#//@entities.1/@actions.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Ic-0IxT0Ee6oHfWVz2cv2w" targetArrow="InputFillClosedArrow" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@edgeMappings[name='ActionEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_Ic-0JBT0Ee6oHfWVz2cv2w" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@edgeMappings[name='ActionEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Ic-0JxT0Ee6oHfWVz2cv2w" name="land -> LANDED" incomingEdges="_IdACSBT0Ee6oHfWVz2cv2w" sourceNode="_ybOQMBGdEe6g-vAOfrZkjA" targetNode="_NIvgABTxEe6oHfWVz2cv2w">
+      <target xmi:type="controlabstraction:Action" href="My.cabs#//@entities.3/@actions.0"/>
+      <semanticElements xmi:type="controlabstraction:Action" href="My.cabs#//@entities.3/@actions.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Ic-0KBT0Ee6oHfWVz2cv2w" targetArrow="InputFillClosedArrow" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@edgeMappings[name='ActionEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_Ic-0KRT0Ee6oHfWVz2cv2w" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@edgeMappings[name='ActionEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_IdACSBT0Ee6oHfWVz2cv2w" sourceNode="_aHSyMBTSEe6oHfWVz2cv2w" targetNode="_Ic-0JxT0Ee6oHfWVz2cv2w">
+      <target xmi:type="controlabstraction:Condition" href="My.cabs#//@entities.3/@actions.0/@conditions.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_IdACSRT0Ee6oHfWVz2cv2w" lineStyle="dash" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@edgeMappings[name='AssumptionTargetEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_IdACShT0Ee6oHfWVz2cv2w" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@edgeMappings[name='AssumptionTargetEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_IdACTRT0Ee6oHfWVz2cv2w" sourceNode="_oiaeUBTaEe6oHfWVz2cv2w" targetNode="_Ic-0IhT0Ee6oHfWVz2cv2w">
+      <target xmi:type="controlabstraction:Condition" href="My.cabs#//@entities.1/@actions.1/@conditions.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_IdACThT0Ee6oHfWVz2cv2w" lineStyle="dash" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@edgeMappings[name='AssumptionTargetEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_IdACTxT0Ee6oHfWVz2cv2w" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@edgeMappings[name='AssumptionTargetEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_urbFIBT0Ee6oHfWVz2cv2w" sourceNode="_aHSyMBTSEe6oHfWVz2cv2w" targetNode="_NIu48BTxEe6oHfWVz2cv2w">
+      <target xmi:type="controlabstraction:Condition" href="My.cabs#//@entities.3/@actions.0/@conditions.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_urbFIRT0Ee6oHfWVz2cv2w" lineStyle="dot" targetArrow="NoDecoration" size="2" strokeColor="209,209,209">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@edgeMappings[name='ConditionStateEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_urbFIhT0Ee6oHfWVz2cv2w" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@edgeMappings[name='ConditionStateEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_urbFJRT0Ee6oHfWVz2cv2w" sourceNode="_oiaeUBTaEe6oHfWVz2cv2w" targetNode="_NIvgABTxEe6oHfWVz2cv2w">
+      <target xmi:type="controlabstraction:Condition" href="My.cabs#//@entities.1/@actions.1/@conditions.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_urbFJhT0Ee6oHfWVz2cv2w" lineStyle="dot" targetArrow="NoDecoration" size="2" strokeColor="209,209,209">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@edgeMappings[name='ConditionStateEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_urbFJxT0Ee6oHfWVz2cv2w" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@edgeMappings[name='ConditionStateEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_XfbpQRUAEe6oHfWVz2cv2w" name="takeof -> FLYING" sourceNode="_ybOQMBGdEe6g-vAOfrZkjA" targetNode="_NIvgABTxEe6oHfWVz2cv2w">
+      <target xmi:type="controlabstraction:Action" href="My.cabs#//@entities.3/@actions.1"/>
+      <semanticElements xmi:type="controlabstraction:Action" href="My.cabs#//@entities.3/@actions.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_XfcQQBUAEe6oHfWVz2cv2w" targetArrow="InputFillClosedArrow" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@edgeMappings[name='ActionEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_XfcQQRUAEe6oHfWVz2cv2w" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer/@edgeMappings[name='ActionEdge']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_oydKsBGTEe6g-vAOfrZkjA"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/ac.soton.emf.controlAbstractDiagrams.sirius/description/controlAbstraction.odesign#//@ownedViewpoints[name='cabsViewPoint']/@ownedRepresentations[name='cabsDiagram']/@defaultLayer"/>
+    <target xmi:type="controlabstraction:System" href="My.cabs#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>

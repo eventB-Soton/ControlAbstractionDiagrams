@@ -12,6 +12,12 @@ import junit.textui.TestRunner;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Action</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following features are tested:
+ * <ul>
+ *   <li>{@link ac.soton.emf.controlabstraction.Action#getTarget() <em>Target</em>}</li>
+ * </ul>
+ * </p>
  * @generated
  */
 public class ActionTest extends AbstractNamedElementTest {
@@ -66,6 +72,19 @@ public class ActionTest extends AbstractNamedElementTest {
 	@Override
 	protected void tearDown() throws Exception {
 		setFixture(null);
+	}
+
+	/**
+	 * Tests the '{@link ac.soton.emf.controlabstraction.Action#getTarget() <em>Target</em>}' feature getter.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ac.soton.emf.controlabstraction.Action#getTarget()
+	 * @generated
+	 */
+	public void testGetTarget() {
+		// TODO: implement this feature getter test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
 	}
 
 } //ActionTest

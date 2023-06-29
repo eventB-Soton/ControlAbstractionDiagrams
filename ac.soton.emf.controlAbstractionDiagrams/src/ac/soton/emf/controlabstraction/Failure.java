@@ -3,6 +3,7 @@
  */
 package ac.soton.emf.controlabstraction;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,13 +15,14 @@ package ac.soton.emf.controlabstraction;
  * </p>
  * <ul>
  *   <li>{@link ac.soton.emf.controlabstraction.Failure#getMitigation <em>Mitigation</em>}</li>
+ *   <li>{@link ac.soton.emf.controlabstraction.Failure#getStates <em>States</em>}</li>
  * </ul>
  *
  * @see ac.soton.emf.controlabstraction.ControlabstractionPackage#getFailure()
  * @model
  * @generated
  */
-public interface Failure extends AbstractNamedElement, State {
+public interface Failure extends AbstractNamedElement {
 	/**
 	 * Returns the value of the '<em><b>Mitigation</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -42,5 +44,17 @@ public interface Failure extends AbstractNamedElement, State {
 	 * @generated
 	 */
 	void setMitigation(String value);
+
+	/**
+	 * Returns the value of the '<em><b>States</b></em>' reference list.
+	 * The list contents are of type {@link ac.soton.emf.controlabstraction.State}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>States</em>' reference list.
+	 * @see ac.soton.emf.controlabstraction.ControlabstractionPackage#getFailure_States()
+	 * @model
+	 * @generated
+	 */
+	EList<State> getStates();
 
 } // Failure

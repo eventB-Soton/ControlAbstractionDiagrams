@@ -14,7 +14,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ComponentTest extends AbstractNamedElementTest {
+public class ComponentTest extends AbstractStatefulEntityTest {
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -5,12 +5,19 @@ package ac.soton.emf.controlabstraction.impl;
 
 import ac.soton.emf.controlabstraction.ControlabstractionPackage;
 import ac.soton.emf.controlabstraction.Failure;
+import ac.soton.emf.controlabstraction.State;
+
+import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,6 +28,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link ac.soton.emf.controlabstraction.impl.FailureImpl#getMitigation <em>Mitigation</em>}</li>
+ *   <li>{@link ac.soton.emf.controlabstraction.impl.FailureImpl#getStates <em>States</em>}</li>
  * </ul>
  *
  * @generated
@@ -45,6 +53,16 @@ public class FailureImpl extends AbstractNamedElementImpl implements Failure {
 	 * @ordered
 	 */
 	protected String mitigation = MITIGATION_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getStates() <em>States</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStates()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<State> states;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -94,10 +112,25 @@ public class FailureImpl extends AbstractNamedElementImpl implements Failure {
 	 * @generated
 	 */
 	@Override
+	public EList<State> getStates() {
+		if (states == null) {
+			states = new EObjectResolvingEList<State>(State.class, this, ControlabstractionPackage.FAILURE__STATES);
+		}
+		return states;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ControlabstractionPackage.FAILURE__MITIGATION:
 				return getMitigation();
+			case ControlabstractionPackage.FAILURE__STATES:
+				return getStates();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -107,11 +140,16 @@ public class FailureImpl extends AbstractNamedElementImpl implements Failure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ControlabstractionPackage.FAILURE__MITIGATION:
 				setMitigation((String)newValue);
+				return;
+			case ControlabstractionPackage.FAILURE__STATES:
+				getStates().clear();
+				getStates().addAll((Collection<? extends State>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -128,6 +166,9 @@ public class FailureImpl extends AbstractNamedElementImpl implements Failure {
 			case ControlabstractionPackage.FAILURE__MITIGATION:
 				setMitigation(MITIGATION_EDEFAULT);
 				return;
+			case ControlabstractionPackage.FAILURE__STATES:
+				getStates().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -142,6 +183,8 @@ public class FailureImpl extends AbstractNamedElementImpl implements Failure {
 		switch (featureID) {
 			case ControlabstractionPackage.FAILURE__MITIGATION:
 				return MITIGATION_EDEFAULT == null ? mitigation != null : !MITIGATION_EDEFAULT.equals(mitigation);
+			case ControlabstractionPackage.FAILURE__STATES:
+				return states != null && !states.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

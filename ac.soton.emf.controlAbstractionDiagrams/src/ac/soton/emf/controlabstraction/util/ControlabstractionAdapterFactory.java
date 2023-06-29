@@ -3,17 +3,18 @@
  */
 package ac.soton.emf.controlabstraction.util;
 
+import ac.soton.emf.controlabstraction.AbstractActiveEntity;
+import ac.soton.emf.controlabstraction.AbstractEntity;
 import ac.soton.emf.controlabstraction.AbstractNamedElement;
 import ac.soton.emf.controlabstraction.AbstractStatefulEntity;
 import ac.soton.emf.controlabstraction.Action;
 import ac.soton.emf.controlabstraction.Actor;
 import ac.soton.emf.controlabstraction.Agent;
-import ac.soton.emf.controlabstraction.Assumption;
 import ac.soton.emf.controlabstraction.Component;
+import ac.soton.emf.controlabstraction.Condition;
 import ac.soton.emf.controlabstraction.ControlabstractionPackage;
 import ac.soton.emf.controlabstraction.Failure;
 import ac.soton.emf.controlabstraction.State;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
@@ -86,10 +87,6 @@ public class ControlabstractionAdapterFactory extends AdapterFactoryImpl {
 				return createAgentAdapter();
 			}
 			@Override
-			public Adapter caseAssumption(Assumption object) {
-				return createAssumptionAdapter();
-			}
-			@Override
 			public Adapter caseAction(Action object) {
 				return createActionAdapter();
 			}
@@ -116,6 +113,22 @@ public class ControlabstractionAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseFailure(Failure object) {
 				return createFailureAdapter();
+			}
+			@Override
+			public Adapter caseSystem(ac.soton.emf.controlabstraction.System object) {
+				return createSystemAdapter();
+			}
+			@Override
+			public Adapter caseAbstractEntity(AbstractEntity object) {
+				return createAbstractEntityAdapter();
+			}
+			@Override
+			public Adapter caseAbstractActiveEntity(AbstractActiveEntity object) {
+				return createAbstractActiveEntityAdapter();
+			}
+			@Override
+			public Adapter caseCondition(Condition object) {
+				return createConditionAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -162,20 +175,6 @@ public class ControlabstractionAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAgentAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link ac.soton.emf.controlabstraction.Assumption <em>Assumption</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ac.soton.emf.controlabstraction.Assumption
-	 * @generated
-	 */
-	public Adapter createAssumptionAdapter() {
 		return null;
 	}
 
@@ -274,6 +273,62 @@ public class ControlabstractionAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createFailureAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ac.soton.emf.controlabstraction.System <em>System</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ac.soton.emf.controlabstraction.System
+	 * @generated
+	 */
+	public Adapter createSystemAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ac.soton.emf.controlabstraction.AbstractEntity <em>Abstract Entity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ac.soton.emf.controlabstraction.AbstractEntity
+	 * @generated
+	 */
+	public Adapter createAbstractEntityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ac.soton.emf.controlabstraction.AbstractActiveEntity <em>Abstract Active Entity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ac.soton.emf.controlabstraction.AbstractActiveEntity
+	 * @generated
+	 */
+	public Adapter createAbstractActiveEntityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ac.soton.emf.controlabstraction.Condition <em>Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ac.soton.emf.controlabstraction.Condition
+	 * @generated
+	 */
+	public Adapter createConditionAdapter() {
 		return null;
 	}
 

@@ -3,19 +3,16 @@
  */
 package ac.soton.emf.controlabstraction.impl;
 
-import ac.soton.emf.controlabstraction.AbstractNamedElement;
-import ac.soton.emf.controlabstraction.AbstractStatefulEntity;
 import ac.soton.emf.controlabstraction.Action;
 import ac.soton.emf.controlabstraction.Actor;
 import ac.soton.emf.controlabstraction.Agent;
-import ac.soton.emf.controlabstraction.Assumption;
 import ac.soton.emf.controlabstraction.Component;
+import ac.soton.emf.controlabstraction.Condition;
 import ac.soton.emf.controlabstraction.ControlabstractionFactory;
 import ac.soton.emf.controlabstraction.ControlabstractionPackage;
 import ac.soton.emf.controlabstraction.ErrorType;
 import ac.soton.emf.controlabstraction.Failure;
 import ac.soton.emf.controlabstraction.State;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
@@ -71,14 +68,13 @@ public class ControlabstractionFactoryImpl extends EFactoryImpl implements Contr
 		switch (eClass.getClassifierID()) {
 			case ControlabstractionPackage.COMPONENT: return createComponent();
 			case ControlabstractionPackage.AGENT: return createAgent();
-			case ControlabstractionPackage.ASSUMPTION: return createAssumption();
 			case ControlabstractionPackage.ACTION: return createAction();
 			case ControlabstractionPackage.STATE: return createState();
-			case ControlabstractionPackage.ABSTRACT_STATEFUL_ENTITY: return createAbstractStatefulEntity();
-			case ControlabstractionPackage.ABSTRACT_NAMED_ELEMENT: return createAbstractNamedElement();
 			case ControlabstractionPackage.ACTOR: return createActor();
 			case ControlabstractionPackage.ERROR: return createError();
 			case ControlabstractionPackage.FAILURE: return createFailure();
+			case ControlabstractionPackage.SYSTEM: return createSystem();
+			case ControlabstractionPackage.CONDITION: return createCondition();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -142,17 +138,6 @@ public class ControlabstractionFactoryImpl extends EFactoryImpl implements Contr
 	 * @generated
 	 */
 	@Override
-	public Assumption createAssumption() {
-		AssumptionImpl assumption = new AssumptionImpl();
-		return assumption;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Action createAction() {
 		ActionImpl action = new ActionImpl();
 		return action;
@@ -167,28 +152,6 @@ public class ControlabstractionFactoryImpl extends EFactoryImpl implements Contr
 	public State createState() {
 		StateImpl state = new StateImpl();
 		return state;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public AbstractStatefulEntity createAbstractStatefulEntity() {
-		AbstractStatefulEntityImpl abstractStatefulEntity = new AbstractStatefulEntityImpl();
-		return abstractStatefulEntity;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public AbstractNamedElement createAbstractNamedElement() {
-		AbstractNamedElementImpl abstractNamedElement = new AbstractNamedElementImpl();
-		return abstractNamedElement;
 	}
 
 	/**
@@ -222,6 +185,28 @@ public class ControlabstractionFactoryImpl extends EFactoryImpl implements Contr
 	public Failure createFailure() {
 		FailureImpl failure = new FailureImpl();
 		return failure;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ac.soton.emf.controlabstraction.System createSystem() {
+		SystemImpl system = new SystemImpl();
+		return system;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Condition createCondition() {
+		ConditionImpl condition = new ConditionImpl();
+		return condition;
 	}
 
 	/**

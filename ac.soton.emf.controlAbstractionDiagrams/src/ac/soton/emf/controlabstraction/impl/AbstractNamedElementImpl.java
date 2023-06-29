@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class AbstractNamedElementImpl extends MinimalEObjectImpl.Container implements AbstractNamedElement {
+public abstract class AbstractNamedElementImpl extends MinimalEObjectImpl.Container implements AbstractNamedElement {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->

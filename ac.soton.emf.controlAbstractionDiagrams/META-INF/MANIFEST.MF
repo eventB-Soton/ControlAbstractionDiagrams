@@ -3,15 +3,12 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: ac.soton.emf.controlAbstractionDiagrams;singleton:=true
 Automatic-Module-Name: ac.soton.emf.controlAbstractionDiagrams
-Bundle-Version: 0.1.0.qualifier
+Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-11
-Export-Package: controlabstraction,
- controlabstraction.impl,
- controlabstraction.util,
- ac.soton.emf.controlabstraction,
+Export-Package: ac.soton.emf.controlabstraction,
  ac.soton.emf.controlabstraction.impl,
  ac.soton.emf.controlabstraction.util
 Require-Bundle: org.eclipse.core.runtime,

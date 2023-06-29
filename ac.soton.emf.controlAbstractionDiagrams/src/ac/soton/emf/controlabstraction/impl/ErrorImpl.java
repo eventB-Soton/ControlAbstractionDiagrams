@@ -6,7 +6,6 @@ package ac.soton.emf.controlabstraction.impl;
 import ac.soton.emf.controlabstraction.ControlabstractionPackage;
 import ac.soton.emf.controlabstraction.ErrorType;
 import ac.soton.emf.controlabstraction.Failure;
-
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;

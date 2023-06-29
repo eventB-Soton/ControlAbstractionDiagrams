@@ -32,6 +32,7 @@ public class ControlabstractionAllTests extends TestSuite {
 	 */
 	public static Test suite() {
 		TestSuite suite = new ControlabstractionAllTests("Controlabstraction Tests");
+		suite.addTest(ControlabstractionTests.suite());
 		return suite;
 	}
 

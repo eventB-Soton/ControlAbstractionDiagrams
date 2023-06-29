@@ -47,6 +47,7 @@ public class FailureItemProvider extends AbstractNamedElementItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addMitigationPropertyDescriptor(object);
+			addStatesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -69,6 +70,28 @@ public class FailureItemProvider extends AbstractNamedElementItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the States feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addStatesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Failure_states_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Failure_states_feature", "_UI_Failure_type"),
+				 ControlabstractionPackage.Literals.FAILURE__STATES,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}
